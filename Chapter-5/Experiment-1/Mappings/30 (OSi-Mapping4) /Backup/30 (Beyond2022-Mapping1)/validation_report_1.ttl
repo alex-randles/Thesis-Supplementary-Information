@@ -1,0 +1,55 @@
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <places-organizations-over-time.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <#CITATION3TEXT> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <#CITATION3TEXT> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <#CITATION3TEXT> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <#CITATION3TEXT> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <#CITATION3TEXT> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+
+<places-organizations-over-time.ttl> a mqio:MappingArtefact .
+

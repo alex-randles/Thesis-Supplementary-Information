@@ -1,0 +1,150 @@
+@prefix ex: <http://example.org/> .
+@prefix flavourtown: <http://www.semanticweb.org/FlavourTown#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <flavour-mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<flavour-mapping.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15,
+        ex:violation-16,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL123C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:consistsOf ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Recipes> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL91C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:recipeServes ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Recipes> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL152C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:instructionSet ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#PreparationSteps> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL147C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:stepNumber ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#PreparationSteps> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL32C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:flavourName ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Flavours> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL202C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:provideIngredient ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#IngredientRelations> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL54C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:calories ;
+    mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+    mqio:inTripleMap <#Ingredients> ;
+    mqio:isDescribedBy mqio-metrics:D3 .
+
+ex:violation-15 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL64C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:fat ;
+    mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+    mqio:inTripleMap <#Ingredients> ;
+    mqio:isDescribedBy mqio-metrics:D3 .
+
+ex:violation-16 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL59C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:protein ;
+    mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+    mqio:inTripleMap <#Ingredients> ;
+    mqio:isDescribedBy mqio-metrics:D3 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL112C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:hasIngredient ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Recipes> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-3 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL96C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:recipeName ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Recipes> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-4 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL101C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:belongsTo ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Recipes> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-5 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL175C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:provideFlavour ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#FlavourRelations> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-6 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL16C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:cuisineName ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Cuisines> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-7 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL69C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:tastesLike ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Ingredients> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-8 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL49C25"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:ingredientName ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Ingredients> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-9 a mqio:MappingViolation ;
+    mqio:hasLocation "ub76bL142C17"^^xsd:string ;
+    mqio:hasObjectValue flavourtown:preparationStep ;
+    mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+    mqio:inTripleMap <#PreparationSteps> ;
+    mqio:isDescribedBy mqio-metrics:D1 .
+

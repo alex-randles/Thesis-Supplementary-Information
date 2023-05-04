@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+
+[   a sh:ValidationReport ;
+sh:conforms false ;
+sh:result [
+ a sh:ValidationResult ;
+ sh:resultSeverity sh:Violation ;
+ sh:sourceConstraintComponent sh:InConstraintComponent ;
+ sh:sourceShape _:n839 ;
+ sh:focusNode _:n959 ;
+ sh:value 'Address' ;
+ sh:resultPath rml:reference;
+ sh:resultMessage 'Data reference no longer in source data' ]  
+] .

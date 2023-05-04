@@ -1,0 +1,24 @@
+PREFIX dcam: <http://purl.org/dc/dcam/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX schema: <http://schema.org/> 
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?rangeClass ?comment
+WHERE {
+  GRAPH <%s> {
+    {
+      <%s> rdfs:range|dcam:rangeIncludes|schema:rangeIncludes ?range . 
+      ?range owl:unionOf ?list .
+      ?list rdf:rest*/rdf:first ?rangeClass .
+      OPTIONAL { ?rangeClass  rdfs:comment|prov:definition ?comment .} 
+    }
+    UNION 
+    {
+      <%s> rdfs:range|dcam:rangeIncludes|schema:rangeIncludes ?rangeClass . 
+      OPTIONAL { ?rangeClass  rdfs:comment|prov:definition ?comment .} 
+      FILTER (!isBlank(?rangeClass))
+    }
+  }
+}   
+GROUP BY ?rangeClass ?comment

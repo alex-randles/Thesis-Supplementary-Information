@@ -1,0 +1,24 @@
+PREFIX oscd: <https://w3id.org/OSCD#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?tripleMap ?source ?change ?reference ?changeDescription
+WHERE {
+  GRAPH ?changesGraph {
+    ?changeLog a oscd:ChangeLog;
+            oscd:hasChange ?change;
+    oscd:hasCurrentSource ?currentSource .
+    ?change oscd:hasDataReference ?reference;
+            oscd:hasChangedData ?changedData .
+    ?changedData rdfs:comment ?changeDescription .
+    BIND (REPLACE(STR(?currentSource), "^.*/([^/]*)$", "$1") as ?source)
+  }
+  GRAPH ?mappingGraph {
+    ?tripleMap rml:logicalSource|rr:logicalTable ?logicalSource;
+            rr:predicateObjectMap ?pom .
+    ?logicalSource rml:source|rr:tableName ?source .
+    ?pom rr:objectMap ?objectMap .
+    ?objectMap rml:reference|rr:column ?reference.
+  }
+}

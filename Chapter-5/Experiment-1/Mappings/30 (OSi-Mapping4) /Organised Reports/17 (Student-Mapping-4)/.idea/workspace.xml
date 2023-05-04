@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="856145ca-ac1b-4055-8140-6d1c2c70a291" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../20 (group-11-r2rml)/validation_report.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/../20 (group-11-r2rml)/validation_report.ttl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29 (FAIRVASC-Mapping3)/fairvasc_skane_test_mapping_v3.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/../29 (FAIRVASC-Mapping3)/fairvasc_skane_test_mapping_v3.ttl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../30 (Beyond2022-Mapping1)/places.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../create_results_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../create_results_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment_1_results.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment_1_results.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2LFFBwf1f8hV7DJw3EX1DsPs4LC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MQI-Framework" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="856145ca-ac1b-4055-8140-6d1c2c70a291" name="Default Changelist" comment="" />
+      <created>1675458791999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675458791999</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1675458820992">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1675458820992" />
+  </component>
+</project>

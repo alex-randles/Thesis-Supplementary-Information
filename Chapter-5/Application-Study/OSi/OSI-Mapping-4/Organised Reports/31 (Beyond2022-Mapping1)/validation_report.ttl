@@ -1,0 +1,97 @@
+@prefix ex: <http://example.org/> .
+@prefix fvc: <http://ontologies.adaptcentre.ie/fairvasc#> .
+@prefix mqv: <http://mappingQualityVocabulary.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cidoc: <http://www.w3.org/2001/XMLSchezzma#> .
+@prefix mqv-metric: <http://www.w3.org/2001/#> .
+
+ex:mappingQualityAssessment a mqv:MappingAssessment ;
+    prov:endedAtTime "2023-02-03T19:28:58.615527"^^xsd:dateTime ;
+    mqv:assessedMapping <organizations.ttl> ;
+    mqv:wasPerfomedBy ex:alexRandles .
+
+ex:mappingValidationReport-1675452510 a mqv:MappingValidationReport ;
+    rdfs:comment "A timestamp is appended to the validation report IRI for uniqueness." ;
+    prov:generatedAtTime "2023-02-03T19:28:58.615630"^^xsd:dateTime ;
+    mqv:hasViolation ex:violation-1675452510-0,
+        ex:violation-1675452510-1,
+        ex:violation-1675452510-2,
+        ex:violation-1675452510-3,
+        ex:violation-1675452510-4,
+        ex:violation-1675452510-5,
+        ex:violation-1675452510-6,
+        ex:violation-1675452510-7,
+        ex:violation-1675452510-8 .
+
+ex:alexRandles a prov:Agent .
+
+ex:violation-1675452510-0 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P81b_begin_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#STARTDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-1 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P82b_end_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#STARTDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-2 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P81a_end_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#STARTDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-3 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P82a_begin_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#STARTDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-4 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasValue cidoc:E81_Actor_Appellation ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string ;
+    mqv:inTripleMap <#Appellation> ;
+    mqv:isDescribedBy mqv:metricD1 .
+
+ex:violation-1675452510-5 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P81a_end_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#ENDDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-6 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P82a_begin_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#ENDDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-7 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P82b_end_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#ENDDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675452510-8 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P81b_begin_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#ENDDATETIMESPAN> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+<organizations.ttl> a mqv:MappingDocument .
+

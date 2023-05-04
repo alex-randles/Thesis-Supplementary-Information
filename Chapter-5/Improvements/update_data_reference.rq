@@ -1,0 +1,7 @@
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+
+DELETE { ?objectMap rml:reference 'Address' }
+INSERT { ?objectMap rml:reference 'Postcode' }
+WHERE { 
+  ?objectMap rml:reference 'Address' . 
+} 

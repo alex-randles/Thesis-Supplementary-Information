@@ -1,0 +1,5 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+INSERT {  ?subject rr:class <%s> . }
+WHERE {
+    <%s> rr:subjectMap ?subject
+}

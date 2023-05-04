@@ -1,0 +1,55 @@
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqv: <https://alex-randles.github.io/MQV/#> .
+@prefix mqv-metric: <https://alex-randles.github.io/MQV-METRICS/#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mqv: <http://mappingQualityVocabulary.org/> .
+
+
+ex:mappingQualityAssessment a mqv:MappingAssessment ;
+    prov:endedAtTime "2023-02-03T20:41:35.730769"^^xsd:dateTime ;
+    mqv:assessedMapping <places-organizations-over-time.ttl> ;
+    mqv:wasPerfomedBy ex:alexRandles .
+
+ex:mappingValidationReport-1675456864 a mqv:MappingValidationReport ;
+    rdfs:comment "A timestamp is appended to the validation report IRI for uniqueness." ;
+    prov:generatedAtTime "2023-02-03T20:41:35.730835"^^xsd:dateTime ;
+    mqv:hasViolation ex:violation-1675456864-0,
+        ex:violation-1675456864-1,
+        ex:violation-1675456864-2,
+        ex:violation-1675456864-3 .
+
+ex:alexRandles a prov:Agent .
+
+ex:violation-1675456864-0 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P82a_begin_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#timespan> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675456864-1 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqv:hasValue cidoc:P81a_end_of_the_begin ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#timespan> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675456864-2 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P82b_end_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#timespan> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+ex:violation-1675456864-3 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqv:hasValue cidoc:P81b_begin_of_the_end ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string ;
+    mqv:inTripleMap <#timespan> ;
+    mqv:isDescribedBy mqv:metricD2 .
+
+<places-organizations-over-time.ttl> a mqv:MappingDocument .
+

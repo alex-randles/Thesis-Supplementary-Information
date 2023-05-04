@@ -1,0 +1,40 @@
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0 .
+
+ex:refinement-0 a mqio:MappingRefinement ;
+    mqio:hasRefinementQuery """
+                PREFIX rr: <http://www.w3.org/ns/r2rml#>
+                DELETE { ?subject rr:termType ?currentTermType  }
+                INSERT { ?subject rr:termType <http://www.w3.org/ns/r2rml#IRI> }
+                WHERE {
+                    SELECT ?subject ?currentTermType
+                    WHERE {
+                          ?subject ?p ?o .
+                          OPTIONAL { ?subject rr:termType ?currentTermType }
+                          FILTER(str(?subject) = "ub38bL29C44").
+                    }
+                }
+               """^^xsd:string ;
+    mqio:refinedViolation ex:violation-0 ;
+    mqio:refinementName "Change Term Type"^^xsd:string .
+
+<mapping.ttl> a mqio:MappingArtefact .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqio:hasObjectValue rr:Literal ;
+    mqio:hasResultMessage "Usage of incorrect range. Term type should be 'rr:IRI' or 'rr:BlankNode' for property 'ibclo:hasMetricQuery'."^^xsd:string ;
+    mqio:inTripleMap <#MetricQuery> ;
+    mqio:isDescribedBy mqio-metrics:D6 ;
+    mqio:wasRefinedBy ex:refinement-0 .
+

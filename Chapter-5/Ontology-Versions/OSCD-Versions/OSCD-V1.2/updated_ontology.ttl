@@ -1,0 +1,336 @@
+@prefix : <https://w3id.org/OSCD#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/OSCD#> .
+
+<https://w3id.org/OSCD#> rdf:type owl:Ontology ;
+                          <http://purl.org/dc/terms/abstract> "The Ontology for Source Change Detection (OSCD) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has been used to create an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes." ;
+                          <http://purl.org/dc/terms/created> "20 April 2022" ;
+                          <http://purl.org/dc/terms/creator> "Alex Randles" ,
+                                                             "Declan O'Sullivan" ;
+                          <http://purl.org/dc/terms/description> "The Ontology for Source Change Detection (OSCD) is used to capture information which relates the changes that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality." ;
+                          <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" ;
+                          <http://purl.org/dc/terms/title> "Ontology for Source Change Detection (OSCD)" ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "oscd" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/OSCD#" ;
+                          owl:versionInfo "v1.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/OSCD#approvedChange
+:approvedChange rdf:type owl:ObjectProperty ;
+                owl:inverseOf :wasChangedBy ;
+                rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                rdfs:range :ChangeLog ;
+                rdfs:comment "The change which the agent is responsible for." ;
+                rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                rdfs:label "approvedChange" .
+
+
+###  https://w3id.org/OSCD#hasChange
+:hasChange rdf:type owl:ObjectProperty ;
+           rdfs:domain :ChangeLog ;
+           rdfs:range <http://linkedevents.org/ontology/Event> ;
+           rdfs:comment "A change contained in a change log." ;
+           rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+           rdfs:label "hasChange" .
+
+
+###  https://w3id.org/OSCD#hasCurrentSource
+:hasCurrentSource rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ChangeLog ;
+                  rdfs:range rdfs:Resource ;
+                  rdfs:comment "The current version of the source data." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "hasCurrentSource" .
+
+
+###  https://w3id.org/OSCD#hasMaintainer
+:hasMaintainer rdf:type owl:ObjectProperty ;
+               rdfs:domain :ChangeLog ;
+               rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+               rdfs:comment "The agent who maintains the source data." ;
+               rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+               rdfs:label "hasMaintainer" .
+
+
+###  https://w3id.org/OSCD#hasNotificationPolicy
+:hasNotificationPolicy rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :isNotificationPolicy ;
+                       rdfs:domain :ChangeLog ;
+                       rdfs:range <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                       rdfs:comment "The notification policy details related to a change log." ;
+                       rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                       rdfs:label "hasNotificationPolicy" .
+
+
+###  https://w3id.org/OSCD#hasPreviousSource
+:hasPreviousSource rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ChangeLog ;
+                   rdfs:range rdfs:Resource ;
+                   rdfs:comment "The previous version of the source data of the change log." ;
+                   rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                   rdfs:label "hasPreviousSource" .
+
+
+###  https://w3id.org/OSCD#inChangeLog
+:inChangeLog rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasChange ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain <http://linkedevents.org/ontology/Event> ;
+             rdfs:range :ChangeLog ;
+             rdfs:comment "The change log which contains the change." ;
+             rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+             rdfs:label "inChangeLog" .
+
+
+###  https://w3id.org/OSCD#isCurrentSource
+:isCurrentSource rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasCurrentSource ;
+                 rdfs:domain rdfs:Resource ;
+                 rdfs:range :ChangeLog ;
+                 rdfs:comment "The current version of the source data." ;
+                 rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                 rdfs:label "isCurrentSource" .
+
+
+###  https://w3id.org/OSCD#isMaintainedBy
+:isMaintainedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasMaintainer ;
+                rdfs:domain <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                rdfs:range :ChangeLog ;
+                rdfs:comment "The maintainer of the source data." ;
+                rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                rdfs:label "isMaintainedBy" .
+
+
+###  https://w3id.org/OSCD#isNotificationPolicy
+:isNotificationPolicy rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                      rdfs:range :ChangeLog ;
+                      rdfs:comment "The notification policy defined for the change log" ;
+                      rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                      rdfs:label "isNotificationPolicy" .
+
+
+###  https://w3id.org/OSCD#isPreviousSource
+:isPreviousSource rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasPreviousSource ;
+                  rdfs:domain rdfs:Resource ;
+                  rdfs:range :ChangeLog ;
+                  rdfs:comment "The previous version of the source data." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "isPreviousSource" .
+
+
+###  https://w3id.org/OSCD#wasChangedBy
+:wasChangedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :ChangeLog ;
+              rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+              rdfs:comment "The agent responsible for a change." ;
+              rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+              rdfs:label "wasChangedBy" .
+
+###  https://w3id.org/OSCD#hasChangedData
+:hasChangedData rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                rdfs:range :ChangedData ;
+                rdfs:comment "The data within the source data which has been modified." ;
+                rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                rdfs:label "hasChangedData" .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/OSCD#hasDataReference
+:hasDataReference rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A reference to source data associated with a change." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "hasDataReference" .
+
+
+###  https://w3id.org/OSCD#hasDetectionEnd
+:hasDetectionEnd rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "The time when the notification policy is terminated." ;
+                 rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                 rdfs:label "hasDetectionEnd" .
+
+
+###  https://w3id.org/OSCD#hasDetectionStart
+:hasDetectionStart rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "The time when the notification policy was created." ;
+                   rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                   rdfs:label "hasDetectionStart" .
+
+
+###  https://w3id.org/OSCD#hasPreviousValue
+:hasPreviousValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The original value which was changed." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "hasPreviousValue" .
+
+
+###  https://w3id.org/OSCD#hasStructuralReference
+:hasStructuralReference rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "A reference to a structural component of the source data associated with a change." ;
+                        rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                        rdfs:label "hasStructuralReference" .
+
+
+###  https://w3id.org/OSCD#hasThreshold
+:hasThreshold rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The threshold defined for a change type within the notification policy." ;
+              rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+              rdfs:label "hasThreshold" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://linkedevents.org/ontology/Event
+<http://linkedevents.org/ontology/Event> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  https://w3id.org/OSCD#ChangeLog
+:ChangeLog rdf:type owl:Class ;
+           owl:disjointWith :DatatypeSourceData ,
+                            :DeleteSourceData ,
+                            :InsertSourceData ,
+                            :MergeSourceData ,
+                            :MoveSourceData ,
+                            :UpdateSourceData ;
+           rdfs:comment "A grouping of changes which have occured in a source data." ;
+           rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+           rdfs:label "ChangeLog" .
+
+
+###  https://w3id.org/OSCD#DatatypeSourceData
+:DatatypeSourceData rdf:type owl:Class ;
+                    rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                    rdfs:comment "A datatype which has been modified in the source data." ;
+                    rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                    rdfs:label "DatatypeSourceData" .
+
+
+###  https://w3id.org/OSCD#DeleteSourceData
+:DeleteSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Data which has been removed from the source data." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "DeleteSourceData" .
+
+
+###  https://w3id.org/OSCD#InsertSourceData
+:InsertSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Data which has been added to the source data." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "InsertSourceData" .
+
+
+###  https://w3id.org/OSCD#MergeSourceData
+:MergeSourceData rdf:type owl:Class ;
+                 rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                 rdfs:comment "Source data which has been merged with other data." ;
+                 rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                 rdfs:label "MergeSourceData" .
+
+
+###  https://w3id.org/OSCD#MoveSourceData
+:MoveSourceData rdf:type owl:Class ;
+                rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                rdfs:comment "Data which has changed location in the source data." ;
+                rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                rdfs:label "MoveSourceData" .
+
+
+###  https://w3id.org/OSCD#UpdateSourceData
+:UpdateSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Existing source data which has been modified." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "UpdateSourceData" .
+
+###  https://w3id.org/OSCD#UpdateSourceData
+:ChangedData rdf:type owl:Class ;
+                  rdfs:comment "The data which has been changed in the source data." ;
+                  rdfs:isDefinedBy <https://w3id.org/OSCD#> ;
+                  rdfs:label "ChangedData" .
+
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

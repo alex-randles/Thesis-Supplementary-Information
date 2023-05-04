@@ -1,0 +1,7 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#> 
+PREFIX mo: <http://purl.org/ontology/mo/> 
+DELETE { ?subject rr:class mo:AudioFiles .  }
+INSERT { ?subject rr:class mo:AudioFile .  }
+WHERE {
+    <https://github.com/LinkedBrainz/r2rml/v0.1#work_lyrics> rr:subjectMap ?subject .
+}

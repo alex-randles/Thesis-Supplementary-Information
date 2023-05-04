@@ -1,0 +1,1956 @@
+@prefix b2022: <https://ont.virtualtreasury.ie/ontology#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix daq: <http://purl.org/eis/vocab/daq#> .
+@prefix ex: <http://example.org/> .
+@prefix flavourtown: <http://www.semanticweb.org/FlavourTown#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foodreport: <http://www.foodreport.be/ontology#> .
+@prefix fvc: <http://ontologies.adaptcentre.ie/fairvasc#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix gym: <http://ontology.smartfitgym.eu#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix ont: <http://ontologies.geohive.ie/osi#> .
+@prefix openfit: <http://ontology.openfit.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix recipes: <http://ontology.foodlog.eu#> .
+@prefix recipes1: <http://ontology.wearehungry.be#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix wclass: <http://recipes.workingclass.org#> .
+@prefix www: <http://ontology.recipepicker.eu#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mapping-22 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/places-organizations-over-time.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/places-organizations-over-time.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub22bL172C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81b_begin_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/validation_report.ttl#timespan> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub22bL172C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82b_end_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/validation_report.ttl#timespan> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub22bL167C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82a_begin_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/validation_report.ttl#timespan> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub22bL167C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81a_end_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/22%20%28Beyond2022-Mapping2%29/validation_report.ttl#timespan> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC3 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasObjectValue cidoc: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-30 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/30%20%28OSi-Mapping4%29%20/mappingQualitySchema.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/30%20%28OSi-Mapping4%29%20/mappingQualitySchema.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-6 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28Geohive-Mapping-6%29/Rural_Area_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28Geohive-Mapping-6%29/Rural_Area_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-4 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/4%20%28Geohive-Mapping-4%29/LEA_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/4%20%28Geohive-Mapping-4%29/LEA_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-27 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/mappingDAQobservation_2nd_Dump.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/mappingDAQobservation_2nd_Dump.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub34bL210C16"^^xsd:string ;
+        mqio:hasObjectValue daq:MetricProfile ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/validation_report.ttl#Profiling> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub34bL215C27"^^xsd:string ;
+        mqio:hasObjectValue daq:totalDatasetTriplesAssessed ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/validation_report.ttl#Profiling> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub34bL199C27"^^xsd:string ;
+        mqio:hasObjectValue prov:generated ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/validation_report.ttl#Observations> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub34bL174C22"^^xsd:string ;
+        mqio:hasObjectValue rr:Literal ;
+        mqio:hasResultMessage "Usage of incorrect range. Term type should be 'rr:IRI' or 'rr:BlankNode' for property 'sdmx-dimension:timePeriod'."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/27%20%28OSi-Mapping1%29/validation_report.ttl#Observations> ;
+        mqio:isDescribedBy mqio-metrics:D6 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue sdmx-dimension: ;
+        mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC3 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue sdmx-dimension: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasObjectValue prov: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasObjectValue sdmx-dimension: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasObjectValue prov: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-29 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/29%20%28OSi-Mapping3%29%20/mappingQualitySchema.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/29%20%28OSi-Mapping3%29%20/mappingQualitySchema.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-3 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/3%20%28Geohive-Mapping-3%29/Gaeltacht_Region_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/3%20%28Geohive-Mapping-3%29/Gaeltacht_Region_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLiteralValue "ga"^^xsd:string ;
+        mqio:hasLocation "ub10bL33C16"^^xsd:string ;
+        mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/3%20%28Geohive-Mapping-3%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:MP11 .
+}
+
+ex:mapping-25 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/25%20%28FAIRVASC-Mapping2%29/fairvasc.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/25%20%28FAIRVASC-Mapping2%29/fairvasc.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport .
+}
+
+ex:mapping-12 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/recipes-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/recipes-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub55bL31C16"^^xsd:string ;
+        mqio:hasObjectValue www:Nutrients ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/validation_report.ttl#Nutrients> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub55bL141C16"^^xsd:string ;
+        mqio:hasObjectValue www:Step ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/validation_report.ttl#Steps> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub55bL71C24"^^xsd:string ;
+        mqio:hasObjectValue www:isContainedBy ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/validation_report.ttl#Nutrients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub55bL151C27"^^xsd:string ;
+        mqio:hasObjectValue www:isProvidedBy ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/12%20%28Student-Mapping-2%29/validation_report.ttl#Steps> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+}
+
+ex:mapping-23 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/offices.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/offices.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-15,
+            ex:violation-16,
+            ex:violation-17,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL24C16"^^xsd:string ;
+        mqio:hasObjectValue cidoc:E81_Actor_Appellation ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#OfficeAppellation> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC3 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL248C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:subject ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#ORGANISATIONOFOFFICE> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL259C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:object ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#ORGANISATIONOFOFFICE> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL306C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:subject ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#OFFICEOVERSEENBYORGANISATION> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL317C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:object ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#OFFICEOVERSEENBYORGANISATION> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasObjectValue cidoc: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-15 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-16 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-17 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL197C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:counsellee ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#COUNCILS> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL186C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:counselor ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#COUNCILS> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL134C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:represented_by ;
+        mqio:hasResultMessage "No Human Readable Labelling and Comments."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#SubjectTo> ;
+        mqio:isDescribedBy mqio-metrics:VOC1 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL134C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:represented_by ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#SubjectTo> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL123C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:subjects ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#SubjectTo> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL375C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:object ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#PLACEOFORGANISATION> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasLocation "ub7bL364C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:subject ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/23%20%28Beyond2022-Mapping3%29/validation_report.ttl#PLACEOFORGANISATION> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+}
+
+ex:mapping-17 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/flavour-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/flavour-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-15,
+            ex:violation-16,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL123C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:consistsOf ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Recipes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL91C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:recipeServes ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Recipes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL152C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:instructionSet ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#PreparationSteps> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL147C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:stepNumber ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#PreparationSteps> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL32C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:flavourName ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Flavours> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL202C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:provideIngredient ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#IngredientRelations> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL54C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:calories ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Ingredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-15 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL64C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:fat ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Ingredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-16 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL59C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:protein ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Ingredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL112C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:hasIngredient ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Recipes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL96C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:recipeName ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Recipes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL101C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:belongsTo ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Recipes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL175C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:provideFlavour ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#FlavourRelations> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL16C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:cuisineName ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Cuisines> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL69C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:tastesLike ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Ingredients> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL49C25"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:ingredientName ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#Ingredients> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasLocation "ub76bL142C17"^^xsd:string ;
+        mqio:hasObjectValue flavourtown:preparationStep ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/17%20%28Student-Mapping-7%29/validation_report.ttl#PreparationSteps> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+}
+
+ex:mapping-9 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/9%20%28Geohive-Mapping-9%29/National_Constituency_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/9%20%28Geohive-Mapping-9%29/National_Constituency_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-20 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/latest_mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/latest_mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL102C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:avg_cals ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Session> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL166C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:weigth ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#StrengthExercise> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL137C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:name ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Exercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL133C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:description ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Exercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL55C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:conditioning_id ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Conditioning> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL64C19"^^xsd:string ;
+        mqio:hasObjectValue openfit:WeightLoss ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#WeightLoss> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL71C25"^^xsd:string ;
+        mqio:hasObjectValue openfit:has_target_area ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#WeightLoss> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL28C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:muscle_gain_id ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#MuscleGain> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL190C16"^^xsd:string ;
+        mqio:hasObjectValue openfit:CardioExercise ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#CardioExercise> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL201C25"^^xsd:string ;
+        mqio:hasObjectValue openfit:has_target_muscle ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#CardioExercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL196C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:duration ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#CardioExercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL196C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:repetitions ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#CardioExercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL196C24"^^xsd:string ;
+        mqio:hasObjectValue openfit:sets ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#CardioExercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL144C25"^^xsd:string ;
+        mqio:hasObjectValue openfit:has_goal ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Exercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasLocation "ub37bL14C27"^^xsd:string ;
+        mqio:hasObjectValue openfit:descriptions ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/20%20%28Student-Mapping-10%29/validation_report.ttl#Goal> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+
+ex:mapping-14 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/14%20%28Student-Mapping-4%29/workouts-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/14%20%28Student-Mapping-4%29/workouts-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue owl: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue owl: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-18 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/18%20%28Student-Mapping-8%29/mappingV3.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/18%20%28Student-Mapping-8%29/mappingV3.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub82bL214C24"^^xsd:string ;
+        mqio:hasObjectValue wclass:cabrohydrates ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/18%20%28Student-Mapping-8%29/validation_report.ttl#Product> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+
+ex:mapping-13 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/recipes-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/recipes-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-15,
+            ex:violation-16,
+            ex:violation-17,
+            ex:violation-18,
+            ex:violation-19,
+            ex:violation-2,
+            ex:violation-20,
+            ex:violation-21,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL114C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:dietryFiber ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL178C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:costs ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#blankNodesForPriceClass> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL452C27"^^xsd:string ;
+        mqio:hasObjectValue recipes1:servedAs ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipesServedAsProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL619C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:contains ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipeContainsAmountIngredientProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL273C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:tastes ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#IngredientTastesFlavor> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL406C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:preparationTime ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommonPropRecipes> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL484C27"^^xsd:string ;
+        mqio:hasObjectValue recipes1:isServedIn ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipesIsServedInProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-15 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL420C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:originCountry ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommonPropRecipes> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-16 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL413C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:quantityPerson ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommonPropRecipes> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-17 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL157C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:inSeason ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#IngredientSeasonProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-18 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-19 a mqio:MappingViolation ;
+        mqio:hasObjectValue foaf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL120C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:sal ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-20 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-21 a mqio:MappingViolation ;
+        mqio:hasObjectValue foaf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL93C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:energy ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL127C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:protein ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL512C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:uses ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipeToolsProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL107C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:glucide ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL100C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:fat ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#CommenPropIngredients> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL573C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:has ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipePreparationStepsProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasLocation "ub88bL595C25"^^xsd:string ;
+        mqio:hasObjectValue recipes1:containsIngredient ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/13%20%28Student-Mapping-3%29/validation_report.ttl#RecipeContainsIngredientProperty> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+}
+
+ex:mapping-16 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/gym-mapping2.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/gym-mapping2.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-15,
+            ex:violation-16,
+            ex:violation-17,
+            ex:violation-18,
+            ex:violation-19,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL11C16"^^xsd:string ;
+        mqio:hasObjectValue gym:exercise ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercise> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL19C24"^^xsd:string ;
+        mqio:hasObjectValue gym:name ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercise> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL29C24"^^xsd:string ;
+        mqio:hasObjectValue gym:achieve ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercise> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL124C24"^^xsd:string ;
+        mqio:hasObjectValue gym:helpstobuild ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#goal> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL75C24"^^xsd:string ;
+        mqio:hasObjectValue gym:tool ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL81C25"^^xsd:string ;
+        mqio:hasObjectValue gym:achieve ;
+        mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D3 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL162C16"^^xsd:string ;
+        mqio:hasObjectValue gym:exercisetypes ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercisetypes> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-15 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL170C24"^^xsd:string ;
+        mqio:hasObjectValue gym:type ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercisetypes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-16 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL142C16"^^xsd:string ;
+        mqio:hasObjectValue gym:bodyparts ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#bodyparts> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-17 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL150C24"^^xsd:string ;
+        mqio:hasObjectValue gym:name ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#bodyparts> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-18 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL182C16"^^xsd:string ;
+        mqio:hasObjectValue gym:workouttypes ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workouttypes> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-19 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL190C24"^^xsd:string ;
+        mqio:hasObjectValue gym:type ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workouttypes> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL23C24"^^xsd:string ;
+        mqio:hasObjectValue gym:calories ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercise> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL41C24"^^xsd:string ;
+        mqio:hasObjectValue gym:hastypes ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#exercise> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL110C16"^^xsd:string ;
+        mqio:hasObjectValue gym:goal ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#goal> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL118C24"^^xsd:string ;
+        mqio:hasObjectValue gym:name ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#goal> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL59C16"^^xsd:string ;
+        mqio:hasObjectValue gym:workout ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL67C24"^^xsd:string ;
+        mqio:hasObjectValue gym:name ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL92C25"^^xsd:string ;
+        mqio:hasObjectValue gym:hastypes ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasLocation "ub16bL71C24"^^xsd:string ;
+        mqio:hasObjectValue gym:calories ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Student-Mapping-6%29/validation_report.ttl#workout> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+
+ex:mapping-8 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/8%20%28Geohive-Mapping-8%29/ED_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/8%20%28Geohive-Mapping-8%29/ED_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLiteralValue "ga"^^xsd:string ;
+        mqio:hasLocation "ub31bL33C16"^^xsd:string ;
+        mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/8%20%28Geohive-Mapping-8%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:MP11 .
+}
+
+ex:mapping-26 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/fairvasc_euvas_test_mapping_v3.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/fairvasc_euvas_test_mapping_v3.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:hasANCA ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:lastVisit ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:dateOfEncounter ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:hasOutcomes ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/26%20%28FAIRVASC-Mapping3%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+
+ex:mapping-24 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/fairvasc_skane_test_mapping_v3.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/fairvasc_skane_test_mapping_v3.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:creatinineRelationToLab ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:hasANCA ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:lastVisit ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:dateOfEncounter ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue fvc:hasOutcomes ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/24%20%28FAIRVASC-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+
+ex:mapping-28 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/28%20%28OSi-Mapping2%29/mappingQualitySchema.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/28%20%28OSi-Mapping2%29/mappingQualitySchema.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasObjectValue daq: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-10 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/10%20%28Geohive-Mapping-10%29/Parish_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/10%20%28Geohive-Mapping-10%29/Parish_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub4bL39C24"^^xsd:string ;
+        mqio:hasObjectValue ont:logainmId ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/10%20%28Geohive-Mapping-10%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLiteralValue "ga"^^xsd:string ;
+        mqio:hasLocation "ub4bL33C16"^^xsd:string ;
+        mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/10%20%28Geohive-Mapping-10%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:MP11 .
+}
+
+ex:mapping-2 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/2%20%28Geohive-Mapping-2%29/Council_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/2%20%28Geohive-Mapping-2%29/Council_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-5 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/5%20%28Geohive-Mapping-5%29/County_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/5%20%28Geohive-Mapping-5%29/County_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub73bL34C24"^^xsd:string ;
+        mqio:hasObjectValue ont:logainmId ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/5%20%28Geohive-Mapping-5%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLiteralValue "ga"^^xsd:string ;
+        mqio:hasLocation "ub73bL29C16"^^xsd:string ;
+        mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/5%20%28Geohive-Mapping-5%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:MP11 .
+}
+
+ex:mapping-7 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/7%20%28Geohive-Mapping-7%29/Municipal_Districts_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/7%20%28Geohive-Mapping-7%29/Municipal_Districts_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-19 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/19%20%28Student-Mapping-9%29/mapping_data.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/19%20%28Student-Mapping-9%29/mapping_data.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue foaf: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue foaf: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+}
+
+ex:mapping-21 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/organizations.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/organizations.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-10,
+            ex:violation-11,
+            ex:violation-12,
+            ex:violation-13,
+            ex:violation-14,
+            ex:violation-15,
+            ex:violation-16,
+            ex:violation-17,
+            ex:violation-18,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5,
+            ex:violation-6,
+            ex:violation-7,
+            ex:violation-8,
+            ex:violation-9 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL24C16"^^xsd:string ;
+        mqio:hasObjectValue cidoc:E81_Actor_Appellation ;
+        mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#Appellation> ;
+        mqio:isDescribedBy mqio-metrics:D1 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82a_begin_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-10 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-11 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL125C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:part_of ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#PartOf> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-12 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL136C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:composed_of ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#PartOf> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-13 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL199C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:reports_to ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#AccountsTo> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-14 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL188C24"^^xsd:string ;
+        mqio:hasObjectValue b2022:subjects ;
+        mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#AccountsTo> ;
+        mqio:isDescribedBy mqio-metrics:VOC2 .
+
+    ex:violation-15 a mqio:MappingViolation ;
+        mqio:hasObjectValue cidoc: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-16 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-17 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-18 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81a_end_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL424C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81b_begin_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL424C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82b_end_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#STARTDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL467C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82a_begin_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#ENDDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-6 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL467C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81a_end_of_the_begin ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#ENDDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-7 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL472C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P82b_end_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#ENDDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-8 a mqio:MappingViolation ;
+        mqio:hasLocation "ub40bL472C24"^^xsd:string ;
+        mqio:hasObjectValue cidoc:P81b_begin_of_the_end ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/21%20%28Beyond2022-Mapping1%29/validation_report.ttl#ENDDATETIMESPAN> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-9 a mqio:MappingViolation ;
+        mqio:hasObjectValue b2022: ;
+        mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC3 .
+}
+
+ex:mapping-11 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/11%20%28Student-Mapping-1%29/recipes-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/11%20%28Student-Mapping-1%29/recipes-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub25bL179C16"^^xsd:string ;
+        mqio:hasObjectValue recipes:stepNumber ;
+        mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/11%20%28Student-Mapping-1%29/validation_report.ttl#RecipeStep> ;
+        mqio:isDescribedBy mqio-metrics:D7 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub25bL67C16"^^xsd:string ;
+        mqio:hasObjectValue recipes:serving ;
+        mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/11%20%28Student-Mapping-1%29/validation_report.ttl#Recipe> ;
+        mqio:isDescribedBy mqio-metrics:D7 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub25bL227C16"^^xsd:string ;
+        mqio:hasObjectValue recipes:stepNumber ;
+        mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/11%20%28Student-Mapping-1%29/validation_report.ttl#RecipeStepNoIng> ;
+        mqio:isDescribedBy mqio-metrics:D7 .
+}
+
+ex:mapping-1 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/1%20%28Geohive-Mapping-1%29/Barony_20m.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/1%20%28Geohive-Mapping-1%29/Barony_20m.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2,
+            ex:violation-3,
+            ex:violation-4,
+            ex:violation-5 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub46bL39C24"^^xsd:string ;
+        mqio:hasObjectValue ont:logainmId ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/1%20%28Geohive-Mapping-1%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC4 .
+
+    ex:violation-3 a mqio:MappingViolation ;
+        mqio:hasObjectValue rdfs: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-4 a mqio:MappingViolation ;
+        mqio:hasObjectValue geo: ;
+        mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+        mqio:isDescribedBy mqio-metrics:VOC5 .
+
+    ex:violation-5 a mqio:MappingViolation ;
+        mqio:hasLiteralValue "ga"^^xsd:string ;
+        mqio:hasLocation "ub46bL33C16"^^xsd:string ;
+        mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/1%20%28Geohive-Mapping-1%29/validation_report.ttl#TriplesMap1> ;
+        mqio:isDescribedBy mqio-metrics:MP11 .
+}
+
+ex:mapping-15 {
+    ex:mappingQualityAssessment a mqio:MappingAssessment ;
+        mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/15%20%28Student-Mapping-5%29/foodreport-mapping.ttl> ;
+        mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+    <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/15%20%28Student-Mapping-5%29/foodreport-mapping.ttl> a mqio:MappingArtefact .
+
+    ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+        mqio:hasViolation ex:violation-0,
+            ex:violation-1,
+            ex:violation-2 .
+
+    ex:violation-0 a mqio:MappingViolation ;
+        mqio:hasLocation "ub70bL259C27"^^xsd:string ;
+        mqio:hasObjectValue foodreport:manufacturedFrom ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/15%20%28Student-Mapping-5%29/validation_report.ttl#Ingredient> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-1 a mqio:MappingViolation ;
+        mqio:hasLocation "ub70bL76C27"^^xsd:string ;
+        mqio:hasObjectValue foodreport:appliesToIngredient ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/15%20%28Student-Mapping-5%29/validation_report.ttl#Law> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+
+    ex:violation-2 a mqio:MappingViolation ;
+        mqio:hasLocation "ub70bL49C27"^^xsd:string ;
+        mqio:hasObjectValue foodreport:lawText ;
+        mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+        mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/15%20%28Student-Mapping-5%29/validation_report.ttl#Law> ;
+        mqio:isDescribedBy mqio-metrics:D2 .
+}
+

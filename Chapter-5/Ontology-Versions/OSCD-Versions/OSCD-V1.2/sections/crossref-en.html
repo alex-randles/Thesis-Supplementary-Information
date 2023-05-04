@@ -1,0 +1,1041 @@
+<h2 id="crossreference" class="list">Cross-reference for Ontology for Source Change Detection (OSCD) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontology for Source Change Detection (OSCD).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+      </li>
+      <li>
+         <a href="#DatatypeSourceData" title="https://w3id.org/OSCD#DatatypeSourceData">DatatypeSourceData</a>
+      </li>
+      <li>
+         <a href="#DeleteSourceData" title="https://w3id.org/OSCD#DeleteSourceData">DeleteSourceData</a>
+      </li>
+      <li>
+         <a href="#InsertSourceData" title="https://w3id.org/OSCD#InsertSourceData">InsertSourceData</a>
+      </li>
+      <li>
+         <a href="#MergeSourceData" title="https://w3id.org/OSCD#MergeSourceData">MergeSourceData</a>
+      </li>
+      <li>
+         <a href="#MoveSourceData" title="https://w3id.org/OSCD#MoveSourceData">MoveSourceData</a>
+      </li>
+      <li>
+         <a href="#UpdateSourceData" title="https://w3id.org/OSCD#UpdateSourceData">UpdateSourceData</a>
+      </li>
+   </ul>
+   <div class="entity" id="ChangeLog">
+      <h3>ChangeLog<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#ChangeLog</p>
+      <div class="comment">
+         <span class="markdown">A grouping of changes which have occurred in a source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasChange" title="https://w3id.org/OSCD#hasChange">hasChange</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCurrentSource" title="https://w3id.org/OSCD#hasCurrentSource">hasCurrentSource</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasMaintainer" title="https://w3id.org/OSCD#hasMaintainer">hasMaintainer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasNotificationPolicy" title="https://w3id.org/OSCD#hasNotificationPolicy">hasNotificationPolicy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPreviousSource" title="https://w3id.org/OSCD#hasPreviousSource">hasPreviousSource</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#wasChangedBy" title="https://w3id.org/OSCD#wasChangedBy">wasChangedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#approvedChange" title="https://w3id.org/OSCD#approvedChange">approvedChange</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#inChangeLog" title="https://w3id.org/OSCD#inChangeLog">inChangeLog</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isCurrentSource" title="https://w3id.org/OSCD#isCurrentSource">isCurrentSource</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isMaintainedBy" title="https://w3id.org/OSCD#isMaintainedBy">isMaintainedBy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isNotificationPolicy" title="https://w3id.org/OSCD#isNotificationPolicy">isNotificationPolicy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPreviousSource" title="https://w3id.org/OSCD#isPreviousSource">isPreviousSource</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#DatatypeSourceData" title="https://w3id.org/OSCD#DatatypeSourceData">DatatypeSourceData</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DeleteSourceData" title="https://w3id.org/OSCD#DeleteSourceData">DeleteSourceData</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#InsertSourceData" title="https://w3id.org/OSCD#InsertSourceData">InsertSourceData</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MergeSourceData" title="https://w3id.org/OSCD#MergeSourceData">MergeSourceData</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MoveSourceData" title="https://w3id.org/OSCD#MoveSourceData">MoveSourceData</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#UpdateSourceData" title="https://w3id.org/OSCD#UpdateSourceData">UpdateSourceData</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DatatypeSourceData">
+      <h3>DatatypeSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#DatatypeSourceData</p>
+      <div class="comment">
+         <span class="markdown">A datatype which has been modified in the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DeleteSourceData">
+      <h3>DeleteSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#DeleteSourceData</p>
+      <div class="comment">
+         <span class="markdown">Data which has been removed from the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InsertSourceData">
+      <h3>InsertSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#InsertSourceData</p>
+      <div class="comment">
+         <span class="markdown">Data which has been added to the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MergeSourceData">
+      <h3>MergeSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#MergeSourceData</p>
+      <div class="comment">
+         <span class="markdown">Source data which has been merged with other data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MoveSourceData">
+      <h3>MoveSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#MoveSourceData</p>
+      <div class="comment">
+         <span class="markdown">Data which has changed location in the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UpdateSourceData">
+      <h3>UpdateSourceData<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#UpdateSourceData</p>
+      <div class="comment">
+         <span class="markdown">Existing source data which has been modified.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://linkedevents.org/ontology/Event"
+               target="_blank"
+               title="http://linkedevents.org/ontology/Event">event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#approvedChange" title="https://w3id.org/OSCD#approvedChange">approvedChange</a>
+      </li>
+      <li>
+         <a href="#hasChange" title="https://w3id.org/OSCD#hasChange">hasChange</a>
+      </li>
+      <li>
+         <a href="#hasCurrentSource" title="https://w3id.org/OSCD#hasCurrentSource">hasCurrentSource</a>
+      </li>
+      <li>
+         <a href="#hasMaintainer" title="https://w3id.org/OSCD#hasMaintainer">hasMaintainer</a>
+      </li>
+      <li>
+         <a href="#hasNotificationPolicy" title="https://w3id.org/OSCD#hasNotificationPolicy">hasNotificationPolicy</a>
+      </li>
+      <li>
+         <a href="#hasPreviousSource" title="https://w3id.org/OSCD#hasPreviousSource">hasPreviousSource</a>
+      </li>
+      <li>
+         <a href="#inChangeLog" title="https://w3id.org/OSCD#inChangeLog">inChangeLog</a>
+      </li>
+      <li>
+         <a href="#isCurrentSource" title="https://w3id.org/OSCD#isCurrentSource">isCurrentSource</a>
+      </li>
+      <li>
+         <a href="#isMaintainedBy" title="https://w3id.org/OSCD#isMaintainedBy">isMaintainedBy</a>
+      </li>
+      <li>
+         <a href="#isNotificationPolicy" title="https://w3id.org/OSCD#isNotificationPolicy">isNotificationPolicy</a>
+      </li>
+      <li>
+         <a href="#isPreviousSource" title="https://w3id.org/OSCD#isPreviousSource">isPreviousSource</a>
+      </li>
+      <li>
+         <a href="#wasChangedBy" title="https://w3id.org/OSCD#wasChangedBy">wasChangedBy</a>
+      </li>
+   </ul>
+   <div class="entity" id="approvedChange">
+      <h3>approvedChange<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#approvedChange</p>
+      <div class="comment">
+         <span class="markdown">The change which the agent is responsible for.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+                  target="_blank"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#wasChangedBy" title="https://w3id.org/OSCD#wasChangedBy">wasChangedBy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasChange">
+      <h3>hasChange<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasChange</p>
+      <div class="comment">
+         <span class="markdown">A change contained in a change log.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#inChangeLog" title="https://w3id.org/OSCD#inChangeLog">inChangeLog</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCurrentSource">
+      <h3>hasCurrentSource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasCurrentSource</p>
+      <div class="comment">
+         <span class="markdown">The current version of the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isCurrentSource" title="https://w3id.org/OSCD#isCurrentSource">isCurrentSource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMaintainer">
+      <h3>hasMaintainer<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasMaintainer</p>
+      <div class="comment">
+         <span class="markdown">The agent who maintains the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+                  target="_blank"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isMaintainedBy" title="https://w3id.org/OSCD#isMaintainedBy">isMaintainedBy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNotificationPolicy">
+      <h3>hasNotificationPolicy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasNotificationPolicy</p>
+      <div class="comment">
+         <span class="markdown">The notification policy details related to a change log.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"
+                  target="_blank"
+                  title="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy">policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isNotificationPolicy" title="https://w3id.org/OSCD#isNotificationPolicy">isNotificationPolicy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPreviousSource">
+      <h3>hasPreviousSource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasPreviousSource</p>
+      <div class="comment">
+         <span class="markdown">The previous version of the source data of the change log.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPreviousSource" title="https://w3id.org/OSCD#isPreviousSource">isPreviousSource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inChangeLog">
+      <h3>inChangeLog<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#inChangeLog</p>
+      <div class="comment">
+         <span class="markdown">The change log which contains the change.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasChange" title="https://w3id.org/OSCD#hasChange">hasChange</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isCurrentSource">
+      <h3>isCurrentSource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#isCurrentSource</p>
+      <div class="comment">
+         <span class="markdown">The current version of the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasCurrentSource" title="https://w3id.org/OSCD#hasCurrentSource">hasCurrentSource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isMaintainedBy">
+      <h3>isMaintainedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#isMaintainedBy</p>
+      <div class="comment">
+         <span class="markdown">The maintainer of the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+                  target="_blank"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasMaintainer" title="https://w3id.org/OSCD#hasMaintainer">hasMaintainer</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isNotificationPolicy">
+      <h3>isNotificationPolicy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#isNotificationPolicy</p>
+      <div class="comment">
+         <span class="markdown">The notification policy defined for the change log</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"
+                  target="_blank"
+                  title="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy">policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasNotificationPolicy" title="https://w3id.org/OSCD#hasNotificationPolicy">hasNotificationPolicy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPreviousSource">
+      <h3>isPreviousSource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#isPreviousSource</p>
+      <div class="comment">
+         <span class="markdown">The previous version of the source data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPreviousSource" title="https://w3id.org/OSCD#hasPreviousSource">hasPreviousSource</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="wasChangedBy">
+      <h3>wasChangedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#wasChangedBy</p>
+      <div class="comment">
+         <span class="markdown">The agent responsible for a change.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeLog" title="https://w3id.org/OSCD#ChangeLog">ChangeLog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
+                  target="_blank"
+                  title="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#approvedChange" title="https://w3id.org/OSCD#approvedChange">approvedChange</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasChangedData" title="https://w3id.org/OSCD#hasChangedData">hasChangedData</a>
+      </li>
+      <li>
+         <a href="#hasDataReference" title="https://w3id.org/OSCD#hasDataReference">hasDataReference</a>
+      </li>
+      <li>
+         <a href="#hasDetectionEnd" title="https://w3id.org/OSCD#hasDetectionEnd">hasDetectionEnd</a>
+      </li>
+      <li>
+         <a href="#hasDetectionStart" title="https://w3id.org/OSCD#hasDetectionStart">hasDetectionStart</a>
+      </li>
+      <li>
+         <a href="#hasPreviousValue" title="https://w3id.org/OSCD#hasPreviousValue">hasPreviousValue</a>
+      </li>
+      <li>
+         <a href="#hasStructuralReference" title="https://w3id.org/OSCD#hasStructuralReference">hasStructuralReference</a>
+      </li>
+      <li>
+         <a href="#hasThreshold" title="https://w3id.org/OSCD#hasThreshold">hasThreshold</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasChangedData">
+      <h3>hasChangedData<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasChangedData</p>
+      <div class="comment">
+         <span class="markdown">The data within the source data which has been modified.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDataReference">
+      <h3>hasDataReference<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasDataReference</p>
+      <div class="comment">
+         <span class="markdown">A reference to source data associated with a change.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDetectionEnd">
+      <h3>hasDetectionEnd<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasDetectionEnd</p>
+      <div class="comment">
+         <span class="markdown">The time when the notification policy is terminated.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"
+                  target="_blank"
+                  title="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy">policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDetectionStart">
+      <h3>hasDetectionStart<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasDetectionStart</p>
+      <div class="comment">
+         <span class="markdown">The time when the notification policy was created.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"
+                  target="_blank"
+                  title="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy">policy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPreviousValue">
+      <h3>hasPreviousValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasPreviousValue</p>
+      <div class="comment">
+         <span class="markdown">The original value which was changed.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStructuralReference">
+      <h3>hasStructuralReference<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasStructuralReference</p>
+      <div class="comment">
+         <span class="markdown">A reference to a structural component of the source data associated with a change.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://linkedevents.org/ontology/Event"
+                  target="_blank"
+                  title="http://linkedevents.org/ontology/Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasThreshold">
+      <h3>hasThreshold<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OSCD#hasThreshold</p>
+      <div class="comment">
+         <span class="markdown">The threshold defined for a change type within the notification policy.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/OSCD#">https://w3id.org/OSCD#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"
+                  target="_blank"
+                  title="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint">simple constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

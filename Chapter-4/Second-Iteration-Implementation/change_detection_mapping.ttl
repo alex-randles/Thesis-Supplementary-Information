@@ -1,0 +1,335 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix testv: <http://www.txample.com/people/voc/>.
+@prefix testd: <http://www.txample.com/people/data/>.
+@prefix oscd: <https://www.w3id.org/OSCD#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix rei-action: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#> .
+@prefix rei-entity: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#> .
+@prefix rei-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> .
+@prefix rei-denontic: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> .
+@prefix rei-constraint: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> .
+@prefix rei-meta-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiMetaPolicy.owl#> .
+@prefix ex: <http://www.example.com/> .
+
+
+######################################
+## TRIPLE MAPS REPRESENTING CHANGES ##
+######################################
+
+<#ChangeLog>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select USER_ID, VERSION_1, VERSION_2
+						  FROM changes_detected
+
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/changeLog/user-{USER_ID}";
+		rr:class oscd:ChangeLog;
+        rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChange ;
+		rr:objectMap  [
+				rr:parentTriplesMap <#DeleteChanges> ;
+			    rr:joinCondition [
+						rr:child "USER_ID";
+						rr:parent "USER_ID";
+				];
+        ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChange ;
+		rr:objectMap  [
+				rr:parentTriplesMap <#UpdateChanges> ;
+			    rr:joinCondition [
+						rr:child "USER_ID";
+						rr:parent "USER_ID";
+				];
+        ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChange ;
+		rr:objectMap  [
+				rr:parentTriplesMap <#InsertChanges> ;
+			    rr:joinCondition [
+						rr:child "USER_ID";
+						rr:parent "USER_ID";
+				];
+        ];
+   ];
+
+	rr:predicateObjectMap [
+	rr:predicate oscd:hasChange ;
+	rr:objectMap  [
+				rr:parentTriplesMap <#MoveChanges> ;
+			    rr:joinCondition [
+						rr:child "USER_ID";
+						rr:parent "USER_ID";
+				];
+        ];
+   ];
+
+   rr:predicateObjectMap [
+	     rr:predicate oscd:hasPreviousSource;
+	     rr:objectMap [
+			rr:column "VERSION_1";
+			rr:termType rr:IRI;
+	     ];
+   ];
+
+   rr:predicateObjectMap [
+	     rr:predicate oscd:hasCurrentSource;
+	     rr:objectMap [
+			rr:column "VERSION_2";
+			rr:termType rr:IRI;
+	     ];
+   ];
+.
+
+
+
+
+
+# Delete Changes
+<#DeleteChanges>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME, DATA_REFERENCE, STRUCTURAL_REFERENCE
+						  FROM changes_detected
+						  WHERE OPERATION IN ('LOP_DELETE_ROWS', 'delete')
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/deleteChange/{ID}";
+		rr:class oscd:DeleteSourceData;
+	    rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate lode:atTime ;
+		rr:objectMap  [
+		    rr:column "DETECTION_TIME";
+			rr:datatype xsd:dateTimeStamp;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChangedData ;
+		rr:objectMap  [
+			rr:template "http://www.example.com/changedData/{ID}";
+		];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasStructuralReference ;
+		rr:objectMap  [
+			rr:column "STRUCTURAL_REFERENCE";
+		];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasDataReference ;
+		rr:objectMap  [
+			rr:column "DATA_REFERENCE";
+		];
+   ];
+
+.
+
+# Delete Changes
+<#MoveChanges>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME, NEW_LOCATION
+						  FROM changes_detected
+						  WHERE OPERATION IN ('LOP_DELETE_ROWS', 'move')
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/moveChange/{ID}";
+		rr:class oscd:MoveSourceData;
+	    rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate lode:atTime ;
+		rr:objectMap  [
+		    rr:column "DETECTION_TIME";
+			rr:datatype xsd:dateTimeStamp;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChangedData ;
+		rr:objectMap  [
+			rr:template "http://www.example.com/changedData/{ID}";
+		];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasDataReference ;
+		rr:objectMap  [
+			rr:column "NEW_LOCATION";
+		];
+   ];
+
+.
+
+<#MoveChangedData>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME, NEW_LOCATION
+						  FROM changes_detected
+						  WHERE OPERATION IN ('LOP_DELETE_ROWS', 'move')
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/changedData/{ID}";
+		rr:class oscd:ChangedData;
+        rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasNewLocation ;
+		rr:objectMap  [
+		    rr:column "NEW_LOCATION";
+  	    ];
+   ];
+.
+
+<#UpdateChanges>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME
+						  FROM changes_detected
+						  WHERE OPERATION IN ('LOP_MODIFY_ROWS', 'rename')
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/updateChange/{ID}";
+		rr:class oscd:UpdateSourceData;
+        rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate lode:atTime ;
+		rr:objectMap  [
+		    rr:column "DETECTION_TIME";
+			rr:datatype xsd:dateTimeStamp;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasReason ;
+		rr:objectMap  [
+			rr:column "DESCRIPTION";
+		];
+   ];
+
+.
+
+
+
+
+<#InsertChanges>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME, DATA_REFERENCE, STRUCTURAL_REFERENCE
+						  FROM changes_detected
+						  WHERE OPERATION IN ('LOP_INSERT_ROWS', 'insert')
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/insertChange/{ID}";
+		rr:class oscd:InsertSourceData;
+        rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate lode:atTime ;
+		rr:objectMap  [
+		    rr:column "DETECTION_TIME";
+			rr:datatype xsd:dateTimeStamp;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasChangedData ;
+		rr:objectMap  [
+			rr:template "http://www.example.com/changedData/{ID}";
+		];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasStructuralReference ;
+		rr:objectMap  [
+			rr:column "STRUCTURAL_REFERENCE";
+		];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate oscd:hasDataReference ;
+		rr:objectMap  [
+			rr:column "DATA_REFERENCE";
+		];
+   ];
+.
+
+<#ChangedData>
+
+	rr:logicalTable [
+	                  rr:sqlQuery """
+						  Select ID, OPERATION, USER_ID, DESCRIPTION, DETECTION_TIME, DATA_REFERENCE, STRUCTURAL_REFERENCE
+						  FROM changes_detected
+				       	""";
+				    	rr:sqlVersion rr:SQL2008;
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/changedData/{ID}";
+		rr:class oscd:ChangedData;
+        rr:graphMap [ rr:template "http://www.example.com/changesGraph/user-{USER_ID}" ];
+
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate rdfs:comment ;
+		rr:objectMap  [
+		    rr:column "DESCRIPTION";
+  	    ];
+   ];
+.
+.

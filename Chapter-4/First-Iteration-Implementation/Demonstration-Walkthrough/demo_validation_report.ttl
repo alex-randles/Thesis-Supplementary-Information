@@ -1,0 +1,69 @@
+@prefix ex: <http://example.org/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    prov:wasAssociatedWith ex:AlexRandles ;
+    mqio:assessedMapping <demo_mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<demo_mapping.ttl> a mqio:MappingArtefact ;
+    mqio:wasCreatedBy <https://musicbrainz.org/> .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1 .
+
+ex:refinement-0 a mqio:MappingRefinement ;
+    prov:endedAtTime "2023-05-01T13:33:31.329832"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:AlexRandles ;
+    mqio:hasRefinementQuery """
+                PREFIX rr: <http://www.w3.org/ns/r2rml#> 
+                DELETE { ?subject rr:class <http://purl.org/ontology/mo/AudioFiles> .  }
+                INSERT {   ?subject rr:class <http://purl.org/ontology/mo/AudioFile>  }
+                WHERE {
+                    <https://github.com/LinkedBrainz/r2rml/v0.1#work_lyrics> rr:subjectMap ?subject .
+                }
+                """^^xsd:string ;
+    mqio:refinedViolation ex:violation-0 ;
+    mqio:refinementName "Find Similar Classes"^^xsd:string .
+
+ex:refinement-1 a mqio:MappingRefinement ;
+    prov:endedAtTime "2023-05-01T13:33:31.380889"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:AlexRandles ;
+    mqio:hasRefinementQuery """
+                PREFIX rr: <http://www.w3.org/ns/r2rml#> 
+                DELETE { ?subject rr:termType ?currentTermType  } 
+                INSERT { ?subject rr:termType <http://www.w3.org/ns/r2rml#IRI> } 
+                WHERE { 
+                    SELECT ?subject ?currentTermType
+                    WHERE {
+                          ?subject ?p ?o . 
+                          OPTIONAL { ?subject rr:termType ?currentTermType }
+                          FILTER(str(?subject) = "ub17bL22C19").
+                    }
+                }; 
+               """^^xsd:string ;
+    mqio:refinedViolation ex:violation-1 ;
+    mqio:refinementName "Change Term Type"^^xsd:string .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "subjectMap"^^xsd:string ;
+    mqio:hasObjectValue mo:AudioFiles ;
+    mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+    mqio:inTripleMap <#work_lyrics> ;
+    mqio:isDescribedBy mqio-metrics:D1 ;
+    mqio:wasRefinedBy ex:refinement-0 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqio:hasObjectValue rr:Literal ;
+    mqio:hasResultMessage "Usage of incorrect range. Term type should be 'rr:IRI' or 'rr:BlankNode' for property 'mo:lyrics'."^^xsd:string ;
+    mqio:inTripleMap <#work_lyrics> ;
+    mqio:isDescribedBy mqio-metrics:D6 ;
+    mqio:wasRefinedBy ex:refinement-1 .
+

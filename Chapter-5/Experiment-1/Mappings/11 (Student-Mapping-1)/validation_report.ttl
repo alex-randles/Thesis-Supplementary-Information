@@ -1,0 +1,38 @@
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix recipes: <http://ontology.foodlog.eu#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <recipes-mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-2 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub25bL179C16"^^xsd:string ;
+    mqio:hasObjectValue recipes:stepNumber ;
+    mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+    mqio:inTripleMap <#RecipeStep> ;
+    mqio:isDescribedBy mqio-metrics:D7 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub25bL67C16"^^xsd:string ;
+    mqio:hasObjectValue recipes:serving ;
+    mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+    mqio:inTripleMap <#Recipe> ;
+    mqio:isDescribedBy mqio-metrics:D7 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLocation "ub25bL227C16"^^xsd:string ;
+    mqio:hasObjectValue recipes:stepNumber ;
+    mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+    mqio:inTripleMap <#RecipeStepNoIng> ;
+    mqio:isDescribedBy mqio-metrics:D7 .
+
+<recipes-mapping.ttl> a mqio:MappingArtefact .
+

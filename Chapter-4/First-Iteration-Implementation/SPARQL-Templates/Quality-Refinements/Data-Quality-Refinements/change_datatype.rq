@@ -1,0 +1,10 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+DELETE { ?objectMap rr:datatype ?datatype }
+INSERT { ?objectMap rr:datatype %s }
+WHERE {
+    SELECT ?objectMap ?datatype
+    WHERE {
+          ?objectMap rr:datatype ?datatype.
+          FILTER(str(?objectMap) = "%s").
+    }
+}

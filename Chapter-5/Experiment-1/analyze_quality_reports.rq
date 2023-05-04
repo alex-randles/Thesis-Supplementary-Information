@@ -1,0 +1,12 @@
+PREFIX mqio: <https://w3id.org/MQIO#>
+
+SELECT ?metric (COUNT(?metric) AS ?violationCount)
+WHERE {
+  GRAPH ?mappingGraph {
+    ?qualityAssessment a mqio:MappingAssessment;
+                    mqio:hasValidationReport ?qualityReport .
+    ?qualityReport  mqio:hasViolation  ?violation .
+    ?violation  mqio:isDescribedBy  ?metric .
+  }
+}
+GROUP BY ?metric

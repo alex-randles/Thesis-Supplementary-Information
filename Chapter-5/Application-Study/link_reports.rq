@@ -1,0 +1,5 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+INSERT DATA
+{
+   ex:mappingQualityAssessment prov:wasAssociatedWith ex:changeLog-1  .
+}

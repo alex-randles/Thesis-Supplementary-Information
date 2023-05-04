@@ -1,0 +1,30 @@
+@prefix ex: <http://example.org/> .
+@prefix fvc: <http://ontologies.adaptcentre.ie/fairvasc#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <fairvasc_skane_test_mapping_v3.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<fairvasc_skane_test_mapping_v3.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-10,
+        ex:violation-11 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "ub326bL476C16"^^xsd:string ;
+    mqio:hasObjectValue fvc:Creatinine ;
+    mqio:hasResultMessage "No Human Readable Labelling and Comments."^^xsd:string ;
+    mqio:inTripleMap <#creatinine> ;
+    mqio:isDescribedBy mqio-metrics:VOC1 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue fvc: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <#creatinine> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+

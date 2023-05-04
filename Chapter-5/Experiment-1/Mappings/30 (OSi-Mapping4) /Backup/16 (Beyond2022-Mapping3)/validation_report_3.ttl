@@ -1,0 +1,113 @@
+@prefix b2022: <https://ont.beyond2022.ie/ontology#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix mqv-metric: <https://w3id.org/MQIO-metrics#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    prov:endedAtTime "2023-03-02T16:24:05.683082"^^xsd:dateTime ;
+    mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/offices.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 ;
+    mqio:wasPerfomedBy ex:alexRandles .
+
+ex:mappingValidationReport-1677774220 a mqio:MappingValidationReport ;
+    rdfs:comment "A timestamp is appended to the validation report IRI for uniqueness." ;
+    prov:generatedAtTime "2023-03-02T16:24:05.683148"^^xsd:dateTime ;
+    mqio:hasViolation ex:violation-1677774220-0,
+        ex:violation-1677774220-1,
+        ex:violation-1677774220-2,
+        ex:violation-1677774220-3,
+        ex:violation-1677774220-4,
+        ex:violation-1677774220-5,
+        ex:violation-1677774220-6 .
+
+<file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/offices.ttl> a mqio:MappingArtefact,
+        mqio:MappingDocument .
+
+ex:alexRandles a prov:Agent .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15,
+        ex:violation-16,
+        ex:violation-17,
+        ex:violation-18 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC3 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-15 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-16 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+
+ex:violation-1677774220-6 a mqio:MappingViolation ;
+    mqio:hasLocation "subjectMap"^^xsd:string ;
+    mqio:hasObjectValue cidoc:E81_Actor_Appellation ;
+    mqio:hasResultMessage "Usage of undefined Class."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report.ttl#OfficeAppellation> ;
+    mqio:isDescribedBy mqv-metric:D1 .
+
+ex:violation-17 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+
+ex:violation-18 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/16%20%28Beyond2022-Mapping3%29/validation_report_1.ttl#CITATION1URI> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+

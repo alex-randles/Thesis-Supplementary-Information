@@ -1,0 +1,278 @@
+<https://w3id.org/CDO#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/abstract> "The Change Detection Ontology (CDO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has been used to create an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes." .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/created> "20 April 2022" .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/creator> "Alex Randles" .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/creator> "Declan O'Sullivan" .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/description> "The Change Detection Ontology (CDO) is used to capture information which relates the changes that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality." .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" .
+<https://w3id.org/CDO#> <http://purl.org/dc/terms/title> "Change Detection Ontology (CDO)" .
+<https://w3id.org/CDO#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cdo" .
+<https://w3id.org/CDO#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/CDO#" .
+<https://w3id.org/CDO#> <http://www.w3.org/2002/07/owl#versionInfo> "20 April 2022" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/CDO#hasChange
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/2000/01/rdf-schema#range> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/2000/01/rdf-schema#comment> "A change contained in a change log." .
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasChange> <http://www.w3.org/2000/01/rdf-schema#label> "hasChange" .
+# 
+# https://w3id.org/CDO#hasCurrentSource
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The current version of the source data." .
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasCurrentSource> <http://www.w3.org/2000/01/rdf-schema#label> "hasCurrentSource" .
+# 
+# https://w3id.org/CDO#hasMaintainer
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent who maintains the source data." .
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasMaintainer> <http://www.w3.org/2000/01/rdf-schema#label> "hasMaintainer" .
+# 
+# https://w3id.org/CDO#hasNotificationPolicy
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/CDO#isNotificationPolicy> .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The notification policy details related to a change log." .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "hasNotificationPolicy" .
+# 
+# https://w3id.org/CDO#hasPreviousSource
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The previous version of the source data of the change log." .
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasPreviousSource> <http://www.w3.org/2000/01/rdf-schema#label> "hasPreviousSource" .
+# 
+# https://w3id.org/CDO#inChangeLog
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/CDO#hasChange> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2000/01/rdf-schema#comment> "The change log which contains the change." .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#inChangeLog> <http://www.w3.org/2000/01/rdf-schema#label> "inChangeLog" .
+# 
+# https://w3id.org/CDO#isCurrentSource
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/CDO#hasCurrentSource> .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The current version of the source data." .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#isCurrentSource> <http://www.w3.org/2000/01/rdf-schema#label> "isCurrentSource" .
+# 
+# https://w3id.org/CDO#isMaintainedBy
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/CDO#hasMaintainer> .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The maintainer of the source data." .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#isMaintainedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isMaintainedBy" .
+# 
+# https://w3id.org/CDO#isNotificationPolicy
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The notification policy defined for the change log" .
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#isNotificationPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "isNotificationPolicy" .
+# 
+# https://w3id.org/CDO#isPreviousSource
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/CDO#hasPreviousSource> .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/CDO#ChangeLog> .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The previous version of the source data." .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#isPreviousSource> <http://www.w3.org/2000/01/rdf-schema#label> "isPreviousSource" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/CDO#hasChangedData
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/2000/01/rdf-schema#comment> "The data within the source data which has been modified." .
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasChangedData> <http://www.w3.org/2000/01/rdf-schema#label> "hasChangedData" .
+# 
+# https://w3id.org/CDO#hasDataReference
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to source data associated with a change." .
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasDataReference> <http://www.w3.org/2000/01/rdf-schema#label> "hasDataReference" .
+# 
+# https://w3id.org/CDO#hasDetectionEnd
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The time when the notification policy is terminated." .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasDetectionEnd> <http://www.w3.org/2000/01/rdf-schema#label> "hasDetectionEnd" .
+# 
+# https://w3id.org/CDO#hasDetectionStart
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The time when the notification policy was created." .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasDetectionStart> <http://www.w3.org/2000/01/rdf-schema#label> "hasDetectionStart" .
+# 
+# https://w3id.org/CDO#hasStructuralReference
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to a structural component of the source data associated with a change." .
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasStructuralReference> <http://www.w3.org/2000/01/rdf-schema#label> "hasStructuralReference" .
+# 
+# https://w3id.org/CDO#hasThreshold
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "The threshold defined for a change type within the notification policy." .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#label> "hasThreshold" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://linkedevents.org/ontology/Event
+<http://linkedevents.org/ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/CDO#ChangeLog
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#DatatypeSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#DeleteSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#InsertSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#MergeSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#MoveSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/CDO#UpdateSourceData> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of changes which have occured in a source data." .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#ChangeLog> <http://www.w3.org/2000/01/rdf-schema#label> "ChangeLog" .
+# 
+# https://w3id.org/CDO#DatatypeSourceData
+<https://w3id.org/CDO#DatatypeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype which has been modified in the source data." .
+<https://w3id.org/CDO#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "DatatypeSourceData" .
+# 
+# https://w3id.org/CDO#DeleteSourceData
+<https://w3id.org/CDO#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data which has been removed from the source data." .
+<https://w3id.org/CDO#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "DeleteSourceData" .
+# 
+# https://w3id.org/CDO#InsertSourceData
+<https://w3id.org/CDO#InsertSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data which has been added to the source data." .
+<https://w3id.org/CDO#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "InsertSourceData" .
+# 
+# https://w3id.org/CDO#MergeSourceData
+<https://w3id.org/CDO#MergeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Source data which has been merged with other data." .
+<https://w3id.org/CDO#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MergeSourceData" .
+# 
+# https://w3id.org/CDO#MoveSourceData
+<https://w3id.org/CDO#MoveSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data which has changed location in the source data." .
+<https://w3id.org/CDO#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MoveSourceData" .
+# 
+# https://w3id.org/CDO#UpdateSourceData
+<https://w3id.org/CDO#UpdateSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/CDO#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
+<https://w3id.org/CDO#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Existing source data which has been modified." .
+<https://w3id.org/CDO#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/CDO#> .
+<https://w3id.org/CDO#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "UpdateSourceData" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,187 @@
+@prefix cdo: <https://w3id.org/CDO#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+
+<http://www.example.com/changeLog/1>
+  a cdo:ChangeLog ;
+  cdo:hasMaintainer <http://www.example.com/user/1>;
+  cdo:hasDetectionStart "2022-11-00T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDetectionEnd "2022-12-31T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasCurrentVersion <https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/manipulated_file/student.csv> ;
+  cdo:hasPreviousVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0002a-CSV/student.csv>;
+  cdo:hasNotificationPolicy <http://www.example.com/notificationPolicy/user/1>;
+  cdo:hasChange <http://www.example.com/insertChange/15>,
+				<http://www.example.com/insertChange/19>,
+				<http://www.example.com/insertChange/10>,
+				<http://www.example.com/deleteChange/23>,
+				<http://www.example.com/insertChange/20>,
+				<http://www.example.com/insertChange/1>,
+			    <http://www.example.com/insertChange/12>,
+			    <http://www.example.com/insertChange/5>,
+			    <http://www.example.com/insertChange/3>,
+			    <http://www.example.com/insertChange/22>,
+			    <http://www.example.com/insertChange/14>,
+			    <http://www.example.com/insertChange/7>,
+			    <http://www.example.com/insertChange/18>,
+			    <http://www.example.com/insertChange/0>,
+			    <http://www.example.com/insertChange/9>,
+			    <http://www.example.com/insertChange/4>,
+			    <http://www.example.com/insertChange/11>,
+			    <http://www.example.com/insertChange/16>,
+			    <http://www.example.com/insertChange/2>,
+			    <http://www.example.com/insertChange/13>,
+			    <http://www.example.com/insertChange/6>,
+			    <http://www.example.com/deleteChange/24>,
+			    <http://www.example.com/insertChange/17>,
+			    <http://www.example.com/insertChange/21>,
+			    <http://www.example.com/insertChange/8> .
+
+<http://www.example.com/insertChange/14>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T17:41:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "ID";
+  cdo:hasChangedData "13" .
+
+<http://www.example.com/insertChange/6>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T15:02:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "LastName";
+  cdo:hasChangedData "Ronaldo" .
+
+<http://www.example.com/insertChange/21>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-20T09:55:01.286844"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "Sport" .
+
+<http://www.example.com/insertChange/0>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T14:32:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "FirstName";
+  cdo:hasChangedData "Venus" .
+
+<http://www.example.com/insertChange/19>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T15:00:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "LastName" .
+
+<http://www.example.com/insertChange/13>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-28T16:38:04.139923"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "City";
+  cdo:hasChangedData "Brooklyn" .
+
+<http://www.example.com/insertChange/22>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-28T16:07:01.893723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "City" .
+
+<http://www.example.com/insertChange/5>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T14:33:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "FirstName";
+  cdo:hasChangedData "Cristiano" .
+
+<http://www.example.com/insertChange/20>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T14:31:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "FirstName" .
+
+<http://www.example.com/insertChange/18>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-28T16:58:01.148712"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "City";
+  cdo:hasChangedData "San Mateo" .
+
+<http://www.example.com/insertChange/12>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-20T10:11:12.137723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "Sport";
+  cdo:hasChangedData "Basketball" .
+
+<http://www.example.com/insertChange/4>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T17:35:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "ID";
+  cdo:hasChangedData "11" .
+
+<http://www.example.com/deleteChange/24>
+  a cdo:DeleteSourceData ;
+  lode:atTime "2022-10-18T14:05:44.2832120"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "Name" .
+
+<http://www.example.com/insertChange/17>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-20T10:12:01.135823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "Sport";
+  cdo:hasChangedData "Football" .
+
+<http://www.example.com/insertChange/9>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T17:37:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "ID";
+  cdo:hasChangedData "12" .
+
+<http://www.example.com/insertChange/11>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T15:07:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "LastName";
+  cdo:hasChangedData "Jordan" .
+
+<http://www.example.com/insertChange/3>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-28T16:12:01.135723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "City";
+  cdo:hasChangedData "California" .
+
+<http://www.example.com/deleteChange/23>
+  a cdo:DeleteSourceData ;
+  lode:atTime "2022-10-18T14:02:56.9832347"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "Name";
+  cdo:hasChangedData "Venus" .
+
+<http://www.example.com/insertChange/16>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T15:12:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "LastName";
+  cdo:hasChangedData "Brady" .
+
+<http://www.example.com/insertChange/8>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-28T16:15:01.187723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "City";
+  cdo:hasChangedData "Funchal" .
+
+<http://www.example.com/insertChange/10>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T14:38:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "FirstName";
+  cdo:hasChangedData "Michael" .
+
+<http://www.example.com/insertChange/2>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-20T09:58:01.526823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "Sport";
+  cdo:hasChangedData "Tennis" .
+
+<http://www.example.com/insertChange/15>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T14:41:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "FirstName";
+  cdo:hasChangedData "Tom" .
+
+<http://www.example.com/insertChange/7>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-20T10:04:01.186823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "Sport";
+  cdo:hasChangedData "Soccer" .
+
+<http://www.example.com/insertChange/1>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-18T15:01:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "LastName";
+  cdo:hasChangedData "Williams" .

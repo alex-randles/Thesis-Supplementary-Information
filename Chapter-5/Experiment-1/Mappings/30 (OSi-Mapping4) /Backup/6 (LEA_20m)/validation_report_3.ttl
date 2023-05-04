@@ -1,0 +1,63 @@
+@prefix ex: <http://example.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/LEA_20m.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/LEA_20m.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue geo: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue geo: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue geo: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+
+ex:violation-15 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <file:///home/alex/Desktop/Evaluation-1%20%28Validation%20Reports%29/6%20%28LEA_20m%29/validation_report_1.ttl#TriplesMap2> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+

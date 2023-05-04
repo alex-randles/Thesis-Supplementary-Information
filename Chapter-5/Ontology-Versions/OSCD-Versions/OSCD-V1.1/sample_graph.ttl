@@ -1,0 +1,29 @@
+@prefix cdo: <https://w3id.org/CDO#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+
+<http://www.example.com/changeLog/user-1>
+  a cdo:ChangeLog ;
+  cdo:hasMaintainer <http://www.example.com/user/1>;
+  cdo:hasDetectionStart "2022-11-00T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDetectionEnd "2022-12-31T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasCurrentVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0002a-JSON/student.json> ;
+  cdo:hasPreviousVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0001a-JSON/student.json>;
+  cdo:hasNotificationPolicy <http://www.example.com/notificationPolicy/1>; 
+  cdo:hasChange <http://www.example.com/insertChange/0>,
+				<http://www.example.com/insertChange/1> .
+
+<http://www.example.com/insertChange/1>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-01T09:56:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasDataReference "ID";
+  cdo:hasChangedData "10" .
+
+<http://www.example.com/insertChange/0>
+  a cdo:InsertSourceData ;
+  lode:atTime "2022-10-01T09:55:01.286844"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  cdo:hasStructuralReference "Column";
+  cdo:hasChangedData "ID" .
+
+
+

@@ -1,0 +1,12 @@
+PREFIX oscd: <https://www.w3id.org/OSCD#>
+SELECT ?changeType (COUNT(?change) AS ?count)
+WHERE
+{
+  GRAPH ?changesGraph {
+    # GET EACH CHANGE FROM LOG
+    ?changeLog a oscd:ChangeLog ;
+               oscd:hasChange ?change.
+    ?change a ?changeType .
+  }
+}
+GROUP BY ?changeType

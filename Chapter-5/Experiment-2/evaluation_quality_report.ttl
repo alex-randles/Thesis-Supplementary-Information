@@ -1,0 +1,38 @@
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <evaluation_mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<evaluation_mapping.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-2 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqio:hasObjectValue prov:values ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#TriplesMap1> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-1"^^xsd:string ;
+    mqio:hasObjectValue prov:generatedAtTime ;
+    mqio:hasResultMessage "Usage of incorrect datatype."^^xsd:string ;
+    mqio:inTripleMap <#TriplesMap1> ;
+    mqio:isDescribedBy mqio-metrics:D7 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLiteralValue "en-GP"^^xsd:string ;
+    mqio:hasLocation "predicateObjectMap-2"^^xsd:string ;
+    mqio:hasResultMessage "Language tag not defined in RFC 5646."^^xsd:string ;
+    mqio:inTripleMap <#TriplesMap1> ;
+    mqio:isDescribedBy mqio-metrics:MP11 .
+

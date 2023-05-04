@@ -1,0 +1,11 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?ns
+WHERE   
+{ 
+    ?s rr:class|rr:predicate ?o.
+    BIND(REPLACE(str(?o), "(#|/)[^#/]*$", "$1") AS ?ns)
+    # filter out common known namespaces
+    Filter(isURI(?o) && isBlank(?s) && !(STRSTARTS(STR(?o), STR(xsd:))) && !(STRSTARTS(STR(?o), STR(rr:))) && !(STRSTARTS(STR(?o), "file")))
+}

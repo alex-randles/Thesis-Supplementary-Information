@@ -1,0 +1,16 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT ?classOnto (GROUP_CONCAT(?commentOnto ; separator=' ') AS ?comment)
+WHERE {
+  GRAPH <%s> {
+      ?classOnto a ?type .
+      OPTIONAL { ?classOnto  rdfs:comment|skos:definition|prov:definition ?commentOnto . }
+    #  FILTER(?type IN (owl:Class, rdfs:Class) && !isBlank(?classOnto) )
+     FILTER(CONTAINS (LCASE(STR(?type)),'class')  && !isBlank(?classOnto)  )
+     BIND(lang(?commentProperty) AS ?languageTag )
+     FILTER (?languageTag = 'en' || !bound(?languageTag))
+  }
+}
+GROUP BY ?classOnto

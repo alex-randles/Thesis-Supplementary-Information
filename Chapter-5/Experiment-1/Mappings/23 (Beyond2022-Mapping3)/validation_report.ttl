@@ -1,0 +1,148 @@
+@prefix b2022: <https://ont.virtualtreasury.ie/ontology#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <offices.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15,
+        ex:violation-16,
+        ex:violation-17,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL24C16"^^xsd:string ;
+    mqio:hasObjectValue cidoc:E81_Actor_Appellation ;
+    mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+    mqio:inTripleMap <#OfficeAppellation> ;
+    mqio:isDescribedBy mqio-metrics:D1 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC3 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL248C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:subject ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#ORGANISATIONOFOFFICE> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL259C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:object ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#ORGANISATIONOFOFFICE> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL306C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:subject ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#OFFICEOVERSEENBYORGANISATION> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL317C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:object ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#OFFICEOVERSEENBYORGANISATION> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-15 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-16 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-17 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-3 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL197C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:counsellee ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#COUNCILS> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-4 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL186C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:counselor ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#COUNCILS> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-5 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL134C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:represented_by ;
+    mqio:hasResultMessage "No Human Readable Labelling and Comments."^^xsd:string ;
+    mqio:inTripleMap <#SubjectTo> ;
+    mqio:isDescribedBy mqio-metrics:VOC1 .
+
+ex:violation-6 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL134C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:represented_by ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#SubjectTo> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-7 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL123C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:subjects ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#SubjectTo> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-8 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL375C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:object ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#PLACEOFORGANISATION> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+ex:violation-9 a mqio:MappingViolation ;
+    mqio:hasLocation "ub7bL364C24"^^xsd:string ;
+    mqio:hasObjectValue b2022:subject ;
+    mqio:hasResultMessage "No domain definition or range definition."^^xsd:string ;
+    mqio:inTripleMap <#PLACEOFORGANISATION> ;
+    mqio:isDescribedBy mqio-metrics:VOC2 .
+
+<offices.ttl> a mqio:MappingArtefact .
+

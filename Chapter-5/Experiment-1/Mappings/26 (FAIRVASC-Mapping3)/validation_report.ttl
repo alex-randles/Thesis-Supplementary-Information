@@ -1,0 +1,50 @@
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix fvc: <http://ontologies.adaptcentre.ie/fairvasc#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <fairvasc_euvas_test_mapping_v3.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<fairvasc_euvas_test_mapping_v3.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-2,
+        ex:violation-3 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+    mqio:hasObjectValue fvc:hasANCA  ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#STARTDATETIMESPAN> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+    mqio:hasObjectValue fvc:lastVisit  ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#STARTDATETIMESPAN> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+    mqio:hasObjectValue fvc:dateOfEncounter  ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#STARTDATETIMESPAN> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-3 a mqio:MappingViolation ;
+    mqio:hasLocation "ub40bL419C24"^^xsd:string ;
+    mqio:hasObjectValue fvc:hasOutcomes ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#STARTDATETIMESPAN> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+
+

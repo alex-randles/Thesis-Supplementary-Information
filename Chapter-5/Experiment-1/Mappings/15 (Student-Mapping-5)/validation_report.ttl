@@ -1,0 +1,38 @@
+@prefix ex: <http://example.org/> .
+@prefix foodreport: <http://www.foodreport.be/ontology#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <foodreport-mapping.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<foodreport-mapping.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-2 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub70bL259C27"^^xsd:string ;
+    mqio:hasObjectValue foodreport:manufacturedFrom ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Ingredient> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub70bL76C27"^^xsd:string ;
+    mqio:hasObjectValue foodreport:appliesToIngredient ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Law> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLocation "ub70bL49C27"^^xsd:string ;
+    mqio:hasObjectValue foodreport:lawText ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Law> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+

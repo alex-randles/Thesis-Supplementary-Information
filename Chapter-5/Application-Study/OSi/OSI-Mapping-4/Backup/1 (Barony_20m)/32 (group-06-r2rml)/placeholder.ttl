@@ -1,0 +1,158 @@
+@prefix ex: <http://example.org/> .
+@prefix mqv: <https://w3id.org/MQIO#> .
+@prefix mqv-metric: <https://w3id.org/MQIO-metrics#> .
+@prefix recipes: <http://ontology.wearehungry.be#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqv:MappingAssessment ;
+    mqv:assessedMapping <recipes-mapping.ttl> ;
+    mqv:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqv:MappingValidationReport ;
+    mqv:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15,
+        ex:violation-16,
+        ex:violation-17,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:contains ;
+    mqv:inTripleMap <#RecipeContainsAmountIngredientProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-1 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap4"^^xsd:string ;
+    mqv:hasObjectValue recipes:glucide ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-10 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:containsIngredient ;
+    mqv:inTripleMap <#RecipeContainsIngredientProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-11 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:inSeason ;
+    mqv:inTripleMap <#IngredientSeasonProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-12 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:uses ;
+    mqv:inTripleMap <#RecipeToolsProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-13 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:isServedIn ;
+    mqv:inTripleMap <#RecipesIsServedInProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-14 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:costs ;
+    mqv:inTripleMap <#blankNodesForPriceClass> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-15 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:has ;
+    mqv:inTripleMap <#RecipePreparationStepsProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-16 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:servedAs ;
+    mqv:inTripleMap <#RecipesServedAsProperty> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-17 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue recipes:tastes ;
+    mqv:inTripleMap <#IngredientTastesFlavor> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-2 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap2"^^xsd:string ;
+    mqv:hasObjectValue recipes:energy ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-3 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap5"^^xsd:string ;
+    mqv:hasObjectValue recipes:dietryFiber ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-4 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap3"^^xsd:string ;
+    mqv:hasObjectValue recipes:fat ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-5 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap6"^^xsd:string ;
+    mqv:hasObjectValue recipes:sal ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-6 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap7"^^xsd:string ;
+    mqv:hasObjectValue recipes:protein ;
+    mqv:inTripleMap <#CommenPropIngredients> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-7 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap4"^^xsd:string ;
+    mqv:hasObjectValue recipes:originCountry ;
+    mqv:inTripleMap <#CommonPropRecipes> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-8 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap3"^^xsd:string ;
+    mqv:hasObjectValue recipes:quantityPerson ;
+    mqv:inTripleMap <#CommonPropRecipes> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-9 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap2"^^xsd:string ;
+    mqv:hasObjectValue recipes:preparationTime ;
+    mqv:inTripleMap <#CommonPropRecipes> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+<recipes-mapping.ttl> a mqv:MappingArtefact .
+

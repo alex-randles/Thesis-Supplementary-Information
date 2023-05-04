@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+PREFIX mqio: <https://w3id.org/MQIO-metrics/#> 
+SELECT ?metric ?refinements
+WHERE {
+  ?metric rdfs:subClassOf dqv:Metric;
+          mqio:hasRefinement ?refinements . 
+}
+

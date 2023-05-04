@@ -1,0 +1,865 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl", "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl", "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl", "http://linkedevents.org/ontology", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/CDO" ],
+    "title" : {
+      "undefined" : "Change Detection Ontology (CDO)"
+    },
+    "iri" : "https://w3id.org/CDO#",
+    "version" : "20 April 2022",
+    "author" : [ "Alex Randles", "Declan O'Sullivan" ],
+    "description" : {
+      "undefined" : "The Change Detection Ontology (CDO) is used to capture information which relates the changes that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/publicdomain/zero/1.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Declan O'Sullivan",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Alex Randles",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "20 April 2022",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "cdo",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "20 April 2022",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The Change Detection Ontology (CDO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has been used to create an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Change Detection Ontology (CDO)",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/CDO#MergeSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MergeSourceData",
+      "undefined" : "MergeSourceData"
+    },
+    "comment" : {
+      "undefined" : "Source data which has been merged with other data."
+    },
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/CDO#ChangeLog",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ChangeLog",
+      "undefined" : "ChangeLog"
+    },
+    "comment" : {
+      "undefined" : "A grouping of changes which have occured in a source data."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://linkedevents.org/ontology/Event",
+    "baseIri" : "http://linkedevents.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "subClasses" : [ "10", "11", "12", "13", "14", "7" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/CDO#InsertSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InsertSourceData",
+      "undefined" : "InsertSourceData"
+    },
+    "comment" : {
+      "undefined" : "Data which has been added to the source data."
+    },
+    "id" : "13",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent",
+    "baseIri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/CDO#UpdateSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UpdateSourceData",
+      "undefined" : "UpdateSourceData"
+    },
+    "comment" : {
+      "undefined" : "Existing source data which has been modified."
+    },
+    "id" : "12",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy",
+    "baseIri" : "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Policy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/CDO#DatatypeSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DatatypeSourceData",
+      "undefined" : "DatatypeSourceData"
+    },
+    "comment" : {
+      "undefined" : "A datatype which has been modified in the source data."
+    },
+    "id" : "11",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint",
+    "baseIri" : "http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SimpleConstraint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/CDO#DeleteSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DeleteSourceData",
+      "undefined" : "DeleteSourceData"
+    },
+    "comment" : {
+      "undefined" : "Data which has been removed from the source data."
+    },
+    "id" : "10",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/CDO#MoveSourceData",
+    "baseIri" : "https://w3id.org/CDO",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MoveSourceData",
+      "undefined" : "MoveSourceData"
+    },
+    "comment" : {
+      "undefined" : "Data which has changed location in the source data."
+    },
+    "id" : "14",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/CDO#isMaintainedBy",
+    "inverse" : "3",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isMaintainedBy",
+      "undefined" : "isMaintainedBy"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The maintainer of the source data."
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasStructuralReference",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStructuralReference",
+      "undefined" : "hasStructuralReference"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "A reference to a structural component of the source data associated with a change."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasChangedData",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChangedData",
+      "undefined" : "hasChangedData"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "The data within the source data which has been modified."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasMaintainer",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMaintainer",
+      "undefined" : "hasMaintainer"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The agent who maintains the source data."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasPreviousSource",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPreviousSource",
+      "undefined" : "hasPreviousSource"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The previous version of the source data of the change log."
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasChange",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasChange",
+      "undefined" : "hasChange"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "A change contained in a change log."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasCurrentSource",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCurrentSource",
+      "undefined" : "hasCurrentSource"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The current version of the source data."
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/CDO#isNotificationPolicy",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isNotificationPolicy",
+      "undefined" : "isNotificationPolicy"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "The notification policy defined for the change log"
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/CDO#isCurrentSource",
+    "inverse" : "18",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isCurrentSource",
+      "undefined" : "isCurrentSource"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The current version of the source data."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasDataReference",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDataReference",
+      "undefined" : "hasDataReference"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "A reference to source data associated with a change."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "range" : "5",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "5",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "5",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "5",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "5",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "7",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/CDO#inChangeLog",
+    "inverse" : "17",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inChangeLog",
+      "undefined" : "inChangeLog"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "The change log which contains the change."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "14",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasNotificationPolicy",
+    "inverse" : "19",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasNotificationPolicy",
+      "undefined" : "hasNotificationPolicy"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The notification policy details related to a change log."
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "range" : "11",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasDetectionStart",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "37",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDetectionStart",
+      "undefined" : "hasDetectionStart"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "The time when the notification policy was created."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "36"
+  }, {
+    "range" : "10",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasThreshold",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasThreshold",
+      "undefined" : "hasThreshold"
+    },
+    "domain" : "40",
+    "comment" : {
+      "undefined" : "The threshold defined for a change type within the notification policy."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "39"
+  }, {
+    "range" : "12",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "13",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/CDO#hasDetectionEnd",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDetectionEnd",
+      "undefined" : "hasDetectionEnd"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "The time when the notification policy is terminated."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/CDO#isPreviousSource",
+    "inverse" : "15",
+    "baseIri" : "https://w3id.org/CDO",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/CDO#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPreviousSource",
+      "undefined" : "isPreviousSource"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The previous version of the source data."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  } ]
+}

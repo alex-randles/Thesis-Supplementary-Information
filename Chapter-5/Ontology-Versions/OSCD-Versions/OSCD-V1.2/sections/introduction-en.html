@@ -1,0 +1,60 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+
+<p>The Ontology for Source Change Detection (OSCD) extends the LODE ontology <a href="#bib-LODE">[LODE]</a> which is designed to represent Linked data events. 
+The design has been inspired by the state of the art in Linked data change detection <a href="#bib-DSNotify">[DSNotify]</a>. 
+<strong>Fig.1</strong> shows the class interaction diagram for the ontology.
+</p>
+<br>
+<figure style="text-align: center;">
+  <img src="https://alex-randles.github.io/OSCD/images/class_interaction.png" alt="Class Interaction Diagram"  width="85%" height="65%">
+  <figcaption><strong>Fig.1 - </strong> Ontology class interaction diagram.</figcaption>
+  <br>
+</figure> 
+
+The detection of changes within the source data is initiated by an agent who is responsible for maintaining the data (<span style="font-family: 'Courier New', monospace;">oscd:hasMaintainer</span>). 
+Changes will be detected between a previous version (<span style="font-family: 'Courier New', monospace;">oscd:hasPreviousSource</span>) and
+the current version (<span style="font-family: 'Courier New', monospace;">oscd:hasCurrentversion</span>). 
+Once the change detection process has been initiated, changes are detected between when the process began 
+(<span style="font-family: 'Courier New', monospace;">oscd:hasDetectionStart</span>) 
+and a predetermined end date (<span style="font-family: 'Courier New', monospace;">oscd:hasDetectionEnd</span>) 
+which is defined by the maintainer. A notification policy (<span style="font-family: 'Courier New', monospace;">oscd:hasNotificationPolicy</span>) can be 
+defined which is represented with the <a target="_blank" href="https://redirect.cs.umbc.edu/~lkagal1/rei/">Rei policy ontology</a>. 
+The notification policy allows agents to be notified of changes when a certain amount has occurred. 
+Therefore, ensuring the maintainers are informed of changes when required. 
+<br>
+<br>
+Changes which occur in a specific source data are grouped into a log (<span style="font-family: 'Courier New', monospace;">oscd:ChangeLog</span>).
+Each change (<span style="font-family: 'Courier New', monospace;">oscd:hasChange</span>)
+within a change log is represented as a specialized event (<span style="font-family: 'Courier New', monospace;">lode:Event</span>) which has resulted in a change in the source data used to generate linked data. 
+Different change types exist within the ontology which allow the cause of the change to be captured.
+For instance, a value is inserted (<span style="font-family: 'Courier New', monospace;">oscd:InsertSourceData</span>) in the source data. 
+Additional information related to the change such as the data inserted (<span style="font-family: 'Courier New', monospace;">oscd:hasChangedData</span>) or 
+its location within the source data (<span style="font-family: 'Courier New', monospace;">oscd:hasDataReference</span>). 
+The model can be extended to capture domain specific changes.
+
+
+
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>oscd</b></td><td>&lt;https://w3id.org/OSCD#&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>ReiConstraint</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>DUL</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>ReiPolicy</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;http://linkedevents.org/ontology&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>

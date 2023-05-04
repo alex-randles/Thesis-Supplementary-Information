@@ -1,0 +1,54 @@
+@prefix ex: <http://example.org/> .
+@prefix gym: <http://ontology.smartfitgym.eu#> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <gym-mapping2.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<gym-mapping2.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasLocation "ub463bL162C16"^^xsd:string ;
+    mqio:hasObjectValue gym:exercisetypes ;
+    mqio:hasResultMessage "No Human Readable Labelling and Comments."^^xsd:string ;
+    mqio:inTripleMap <#exercisetypes> ;
+    mqio:isDescribedBy mqio-metrics:VOC1 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue gym: ;
+    mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+    mqio:inTripleMap <#exercisetypes> ;
+    mqio:isDescribedBy mqio-metrics:VOC3 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue gym: ;
+    mqio:hasResultMessage "No Machine-Readable license."^^xsd:string ;
+    mqio:inTripleMap <#exercisetypes> ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-13 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue gym: ;
+    mqio:hasResultMessage "No Human-Readable license."^^xsd:string ;
+    mqio:inTripleMap <#exercisetypes> ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-14 a mqio:MappingViolation ;
+    mqio:hasLocation "None"^^xsd:string ;
+    mqio:hasObjectValue gym: ;
+    mqio:hasResultMessage "No Regular Expression of URI."^^xsd:string ;
+    mqio:inTripleMap <#exercisetypes> ;
+    mqio:isDescribedBy mqio-metrics:VOC6 .
+

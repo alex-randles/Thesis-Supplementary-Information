@@ -1,0 +1,6 @@
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+SELECT DISTINCT ?iterator
+WHERE
+{
+  ?subject rml:iterator ?iterator
+}

@@ -1,0 +1,12 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ct: <http://data.linkedct.org/resource/linkedct/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
+PREFIX schema: <http://schema.org/>
+PREFIX powder-s: <http://www.w3.org/2007/05/powder-s#>
+INSERT DATA {
+    <%s>  rdfs:label|dcterms:title|dcterms:description|dcterms:alternative|skos:altLabel|skos:prefLabel|powder-s:text|skosxl:altLabel|skosxl:hiddenLabel|skosxl:prefLabel|skosxl:literalForm|rdfs:comment|schema:description|schema:description|foaf:name "%s" .
+} 

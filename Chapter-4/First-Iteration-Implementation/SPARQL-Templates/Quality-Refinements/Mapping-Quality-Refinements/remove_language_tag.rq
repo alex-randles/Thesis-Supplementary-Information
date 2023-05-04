@@ -1,0 +1,9 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+DELETE { ?subject rr:language ?language  }
+WHERE {
+SELECT ?subject  ?language
+WHERE {
+      ?subject rr:language ?language .
+      FILTER(str(?subject) = "%s").
+    }
+}

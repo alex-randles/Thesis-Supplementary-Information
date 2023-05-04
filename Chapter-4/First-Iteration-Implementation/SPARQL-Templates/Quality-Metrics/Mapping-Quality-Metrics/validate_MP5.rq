@@ -1,0 +1,8 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+SELECT ?om ?pm ?languageTag ?datatype
+WHERE {
+  ?s rr:predicateObjectMap ?pm .
+  ?pm rr:objectMap ?om .
+  ?om rr:datatype ?datatype ;
+      rr:language ?languageTag .
+}

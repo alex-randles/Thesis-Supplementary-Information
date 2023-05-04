@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ex: <http://data.example.com/> .
+@prefix ex-metric-query: <http://data.example.com/metricQuery/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ibclo: <https://ibclo.ericsson.com/#> .
+
+
+<#MetricQuery>
+
+    rr:logicalTable [ rr:tableName "METRIC_METADATA"; ];
+
+    rr:subjectMap [
+                      rr:template "http://data.example.com/action/{ID}";
+                      rr:class ibclo:ActionEffect;
+                  ];
+
+
+    rr:predicateObjectMap [
+                              rr:predicate ibclo:effectsMetrics;
+                              rr:objectMap [ rr:template "http://data.example.com/metric/{ID}" ];
+                          ];
+
+    rr:predicateObjectMap [
+                              rr:predicate ibclo:hasConfidence;
+                              rr:objectMap [ rr:column "CONFIDENCE"; rr:datatype xsd:string ; ];
+                          ];
+
+.

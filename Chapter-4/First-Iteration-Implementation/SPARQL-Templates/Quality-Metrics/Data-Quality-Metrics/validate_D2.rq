@@ -1,0 +1,5 @@
+ASK
+WHERE
+{ GRAPH <%s>
+   { <%s> ?predicate ?object . } 
+}

@@ -1,0 +1,35 @@
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqv: <https://w3id.org/MQIO#> .
+@prefix mqv-metric: <https://w3id.org/MQIO-metrics#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqv:MappingAssessment ;
+    prov:endedAtTime "2023-03-02T16:24:05.683082"^^xsd:dateTime ;
+    mqv:assessedMapping <offices.ttl> ;
+    mqv:wasPerfomedBy ex:alexRandles .
+
+ex:mappingValidationReport-1677774220 a mqv:MappingValidationReport ;
+    rdfs:comment "A timestamp is appended to the validation report IRI for uniqueness." ;
+    prov:generatedAtTime "2023-03-02T16:24:05.683148"^^xsd:dateTime ;
+    mqv:hasViolation ex:violation-1677774220-0,
+        ex:violation-1677774220-1,
+        ex:violation-1677774220-2,
+        ex:violation-1677774220-3,
+        ex:violation-1677774220-4,
+        ex:violation-1677774220-5,
+        ex:violation-1677774220-6 .
+
+ex:alexRandles a prov:Agent .
+
+ex:violation-1677774220-6 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue cidoc:E81_Actor_Appellation ;
+    mqv:hasResultMessage "Usage of undefined Class."^^xsd:string ;
+    mqv:inTripleMap <#OfficeAppellation> ;
+    mqv:isDescribedBy mqv-metric:D1 .
+
+<offices.ttl> a mqv:MappingDocument .
+

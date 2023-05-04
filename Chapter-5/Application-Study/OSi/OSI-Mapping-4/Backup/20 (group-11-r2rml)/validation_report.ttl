@@ -1,0 +1,174 @@
+@prefix ex: <http://example.org/> .
+@prefix gym: <http://ontology.smartfitgym.eu#> .
+@prefix mqv: <https://w3id.org/MQIO#> .
+@prefix mqv-metric: <https://w3id.org/MQIO-metrics#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqv:MappingAssessment ;
+    mqv:assessedMapping <gym-mapping2.ttl> ;
+    mqv:hasValidationReport ex:mappingValidationReport-0 .
+
+<gym-mapping2.ttl> a mqv:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqv:MappingValidationReport ;
+    mqv:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-13,
+        ex:violation-14,
+        ex:violation-15,
+        ex:violation-16,
+        ex:violation-17,
+        ex:violation-18,
+        ex:violation-19,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:workout ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-1 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap5"^^xsd:string ;
+    mqv:hasObjectValue gym:hastypes ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-10 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:goal ;
+    mqv:inTripleMap <#goal> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-11 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:name ;
+    mqv:inTripleMap <#goal> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-12 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap2"^^xsd:string ;
+    mqv:hasObjectValue gym:helpstobuild ;
+    mqv:inTripleMap <#goal> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-13 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:exercise ;
+    mqv:inTripleMap <#exercise> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-14 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:name ;
+    mqv:inTripleMap <#exercise> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-15 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap4"^^xsd:string ;
+    mqv:hasObjectValue gym:hastypes ;
+    mqv:inTripleMap <#exercise> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-16 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap2"^^xsd:string ;
+    mqv:hasObjectValue gym:calories ;
+    mqv:inTripleMap <#exercise> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-17 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap3"^^xsd:string ;
+    mqv:hasObjectValue gym:achieve ;
+    mqv:inTripleMap <#exercise> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-18 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:workouttypes ;
+    mqv:inTripleMap <#workouttypes> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-19 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:type ;
+    mqv:inTripleMap <#workouttypes> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-2 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:name ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-3 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap2"^^xsd:string ;
+    mqv:hasObjectValue gym:calories ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-4 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap3"^^xsd:string ;
+    mqv:hasObjectValue gym:tool ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-5 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap4"^^xsd:string ;
+    mqv:hasObjectValue gym:achieve ;
+    mqv:inTripleMap <#workout> ;
+    mqv:isDescribedBy mqv-metric:D3 ;
+    mqv:resultMessage "Usage of incorrect domain."^^xsd:string .
+
+ex:violation-6 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:exercisetypes ;
+    mqv:inTripleMap <#exercisetypes> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-7 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:type ;
+    mqv:inTripleMap <#exercisetypes> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+
+ex:violation-8 a mqv:MappingViolation ;
+    mqv:hasLocation "subjectMap"^^xsd:string ;
+    mqv:hasObjectValue gym:bodyparts ;
+    mqv:inTripleMap <#bodyparts> ;
+    mqv:isDescribedBy mqv-metric:D1 ;
+    mqv:resultMessage "Usage of undefined Class."^^xsd:string .
+
+ex:violation-9 a mqv:MappingViolation ;
+    mqv:hasLocation "predicateObjectMap1"^^xsd:string ;
+    mqv:hasObjectValue gym:name ;
+    mqv:inTripleMap <#bodyparts> ;
+    mqv:isDescribedBy mqv-metric:D2 ;
+    mqv:resultMessage "Usage of undefined Property."^^xsd:string .
+

@@ -1,0 +1,7 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+SELECT ?predicate ?pom
+WHERE {
+     ?subject rr:predicateObjectMap ?pom .
+     ?pom rr:predicate ?predicate .
+     FILTER(!isIRI(?predicate))
+}

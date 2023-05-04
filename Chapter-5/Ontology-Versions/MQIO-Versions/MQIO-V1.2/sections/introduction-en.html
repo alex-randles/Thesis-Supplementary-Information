@@ -1,0 +1,59 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<center> 
+<figure>
+  <img src="./images/model.png" alt="Model diagram">
+  <figcaption>Fig.1 - Ontology class interaction diagram.</figcaption>
+</figure> 
+</center>
+
+<center> 
+<figure>
+  <img src="./images/reuse.png" alt="Reuse diagram">
+  <figcaption>Fig.2 - Reuse of the ontology.</figcaption>
+</figure> 
+</center>
+
+<p>
+Fig. 1 shows the class interaction diagram of the ontology. The ontology describes 3 stages of mapping quality improvement. These stages are categorised as  mapping quality assessment,  mapping quality refinement and mapping quality validation.
+</p>
+
+<p>
+<strong>Mapping quality assessment. </strong>In this stage, the mapping artefact (mqio:MappingArtefact) is assessed. The assessment activity is captured through the mqio:MappingAssessment class.
+The agent who initiated the process is also captured (prov:Agent). A mapping assessment activity may have quality requirements which are captured through the mqio:QualityRequirement
+class. This information allows the ontology to validate whether such quality requirements have been satisfied in the assessment and refinement stage. The ontology draws inspiration from
+DQV <a href="#bib-DQV">[DQV]</a> where data quality was classified into categories (dqv:Category), dimensions (dqv:Dimension) and metrics (dqv:Metric) <a href="#bib-ZaveriEtAl">[ZaveriEtAl]</a>. 
+The ontology uses the information in such classes
+to generate a mapping validation report (mqio:MappingValidationReport). Each violation identified is then represented with the mqio:MappingViolation class.
+</p>
+<p>
+<strong>Mapping quality refinement. </strong>This stage captures mapping refinements executed on the mapping. Each metric described using the ontology may have multiple refinements (mqio:MappingRefinement) associated with it depending on the quality aspect being measured. The refinement executed in the mapping is associated with the identified violation through the property mqio:wasRefinedBy. In addition, refinements have scores representing the likelihood the respective violation will be resolved.
+</p>
+<p>
+<strong>Mapping quality validation. </strong>
+Finally, the ontology provides quality information on the original mapping being assessed and the mapping which has been generated as a result of the refinement. As mentioned, each mapping assessment process may have quality requirements which can be validated at this stage. For instance, one may define a quality requirement for understandability related quality metrics to be of a particular value. In this stage, this can be validated by comparing the defined quality requirement and the resulting one. Requirements can be validated by identifying quality measurements (dqv:QualityMeasurement) associated with the quality assessment of the mapping. 
+</p>
+
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>mqio</b></td><td>&lt;https://www.w3.org/MQIO/#&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>dqv</b></td><td>&lt;http://www.w3.org/ns/dqv&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>

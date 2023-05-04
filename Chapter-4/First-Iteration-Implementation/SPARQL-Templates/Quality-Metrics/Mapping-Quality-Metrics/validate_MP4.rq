@@ -1,0 +1,17 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+SELECT ?joinCondition
+WHERE {
+   {
+        ?objectMap rr:joinCondition ?joinCondition .
+        FILTER NOT EXISTS {
+          ?joinCondition rr:child ?child .
+        }
+    }
+    UNION
+    {
+        ?objectMap rr:joinCondition ?joinCondition .
+        FILTER NOT EXISTS {
+          ?joinCondition rr:parent ?parent .
+        }
+    }
+ }

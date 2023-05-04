@@ -1,0 +1,5 @@
+SELECT ?subject ?object
+WHERE {
+    ?subject ?predicate ?object
+    FILTER(isIRI(?object) && CONTAINS(STR(?object), "?"))
+}   

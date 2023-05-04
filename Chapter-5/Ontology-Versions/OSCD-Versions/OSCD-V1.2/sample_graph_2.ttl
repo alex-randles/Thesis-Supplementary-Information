@@ -1,0 +1,219 @@
+@prefix oscd: <https://w3id.org/OSCD#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+@prefix rei-deontic: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> .
+@prefix rei-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> .
+@prefix rei-constraint: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> .
+
+###############################
+#    Changes in source data   #
+###############################
+
+<http://www.example.com/changeLog-1>
+  a oscd:ChangeLog ;
+  oscd:hasMaintainer <http://www.example.com/user-1>;
+  oscd:hasDetectionStart "2022-11-00T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDetectionEnd "2022-12-31T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasCurrentVersion <https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/manipulated_file/student.csv> ;
+  oscd:hasPreviousVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0002a-CSV/student.csv>;
+  oscd:hasNotificationPolicy <http://www.example.com/notificationPolicy-1>; 
+  oscd:hasChange <http://www.example.com/insertChange-15>,
+				<http://www.example.com/insertChange-19>,
+				<http://www.example.com/insertChange-10>,
+				<http://www.example.com/deleteChange-23>,
+				<http://www.example.com/insertChange-20>,
+				<http://www.example.com/insertChange-1>,
+			    <http://www.example.com/insertChange-12>,
+			    <http://www.example.com/insertChange-5>,
+			    <http://www.example.com/insertChange-3>,
+			    <http://www.example.com/insertChange-22>,
+			    <http://www.example.com/insertChange-14>,
+			    <http://www.example.com/insertChange-7>,
+			    <http://www.example.com/insertChange-18>,
+			    <http://www.example.com/insertChange-0>,
+			    <http://www.example.com/insertChange-9>,
+			    <http://www.example.com/insertChange-4>,
+			    <http://www.example.com/insertChange-11>,
+			    <http://www.example.com/insertChange-16>,
+			    <http://www.example.com/insertChange-2>,
+			    <http://www.example.com/insertChange-13>,
+			    <http://www.example.com/insertChange-6>,
+			    <http://www.example.com/deleteChange-24>,
+			    <http://www.example.com/insertChange-17>,
+			    <http://www.example.com/insertChange-21>,
+			    <http://www.example.com/insertChange-8> .
+
+<http://www.example.com/insertChange-14>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T17:41:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "ID";
+  oscd:hasChangedData "13" .
+
+<http://www.example.com/insertChange-6>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T15:02:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "LastName";
+  oscd:hasChangedData "Ronaldo" .
+
+<http://www.example.com/insertChange-21>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-20T09:55:01.286844"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "Sport" .
+
+<http://www.example.com/insertChange-0>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T14:32:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "FirstName";
+  oscd:hasChangedData "Venus" .
+
+<http://www.example.com/insertChange-19>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T15:00:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "LastName" .
+
+<http://www.example.com/insertChange-13>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-28T16:38:04.139923"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "City";
+  oscd:hasChangedData "Brooklyn" .
+
+<http://www.example.com/insertChange-22>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-28T16:07:01.893723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "City" .
+
+<http://www.example.com/insertChange-5>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T14:33:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "FirstName";
+  oscd:hasChangedData "Cristiano" .
+
+<http://www.example.com/insertChange-20>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T14:31:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "FirstName" .
+
+<http://www.example.com/insertChange-18>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-28T16:58:01.148712"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "City";
+  oscd:hasChangedData "San Mateo" .
+
+<http://www.example.com/insertChange-12>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-20T10:11:12.137723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "Sport";
+  oscd:hasChangedData "Basketball" .
+
+<http://www.example.com/insertChange-4>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T17:35:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "ID";
+  oscd:hasChangedData "11" .
+
+<http://www.example.com/deleteChange-24>
+  a oscd:DeleteSourceData ;
+  lode:atTime "2022-10-18T14:05:44.2832120"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "Name" .
+
+<http://www.example.com/insertChange-17>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-20T10:12:01.135823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "Sport";
+  oscd:hasChangedData "Football" .
+
+<http://www.example.com/insertChange-9>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T17:37:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "ID";
+  oscd:hasChangedData "12" .
+
+<http://www.example.com/insertChange-11>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T15:07:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "LastName";
+  oscd:hasChangedData "Jordan" .
+
+<http://www.example.com/insertChange-3>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-28T16:12:01.135723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "City";
+  oscd:hasChangedData "California" .
+
+<http://www.example.com/deleteChange-23>
+  a oscd:DeleteSourceData ;
+  lode:atTime "2022-10-18T14:02:56.9832347"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "Name";
+  oscd:hasChangedData "Venus" .
+
+<http://www.example.com/insertChange-16>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T15:12:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "LastName";
+  oscd:hasChangedData "Brady" .
+
+<http://www.example.com/insertChange-8>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-28T16:15:01.187723"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "City";
+  oscd:hasChangedData "Funchal" .
+
+<http://www.example.com/insertChange-10>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T14:38:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "FirstName";
+  oscd:hasChangedData "Michael" .
+
+<http://www.example.com/insertChange-2>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-20T09:58:01.526823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "Sport";
+  oscd:hasChangedData "Tennis" .
+
+<http://www.example.com/insertChange-15>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T14:41:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "FirstName";
+  oscd:hasChangedData "Tom" .
+
+<http://www.example.com/insertChange-7>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-20T10:04:01.186823"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "Sport";
+  oscd:hasChangedData "Soccer" .
+
+<http://www.example.com/insertChange-1>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-18T15:01:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "LastName";
+  oscd:hasChangedData "Williams" .
+  
+  
+###############################
+# Notification policy details #
+###############################
+
+<http://www.example.com/user-1> a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent>, <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+<http://www.example.com/notificationPolicy-1>
+  a rei-policy:Policy ;
+  rei-policy:desc "Notification policy for user 1" ;
+  rei-policy:grants <http://www.example.com/policyObligation-1> .
+
+<http://www.example.com/policyObligation-1>
+  a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> ;
+  rei-deontic:action <https://w3id.org/OSCD#sendNotification> ;
+  rei-deontic:obligedTo <https://w3id.org/OSCD#softwareAgent> ;
+  rei-deontic:startingConstraint <http://www.example.com/insertChangeConstraint-1> ;
+  rei-policy:actor <http://www.example.com/user-1>, <https://w3id.org/OSCD#softwareAgent> .
+
+<http://www.example.com/insertChangeConstraint-1>
+  a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+  rei-constraint:object "25" ;
+  rei-constraint:predicate <https://w3id.org/OSCD#hasThreshold> ;
+  rei-constraint:subject <https://w3id.org/OSCD#InsertSourceData> .

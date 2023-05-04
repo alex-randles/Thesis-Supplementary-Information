@@ -1,0 +1,7 @@
+ASK
+WHERE {
+  GRAPH <%s> {
+      ?subject ?predicate ?object
+      FILTER(CONTAINS(LCASE(str(?object)), "license"))
+  }
+}

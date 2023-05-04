@@ -1,0 +1,84 @@
+@prefix b2022: <https://ont.virtualtreasury.ie/ontology#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <places-organizations-over-time.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub22bL172C24"^^xsd:string ;
+    mqio:hasObjectValue cidoc:P81b_begin_of_the_end ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#timespan> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub22bL172C24"^^xsd:string ;
+    mqio:hasObjectValue cidoc:P82b_end_of_the_end ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#timespan> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasLocation "ub22bL167C24"^^xsd:string ;
+    mqio:hasObjectValue cidoc:P82a_begin_of_the_begin ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#timespan> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-3 a mqio:MappingViolation ;
+    mqio:hasLocation "ub22bL167C24"^^xsd:string ;
+    mqio:hasObjectValue cidoc:P81a_end_of_the_begin ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#timespan> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-4 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC3 .
+
+ex:violation-5 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-6 a mqio:MappingViolation ;
+    mqio:hasObjectValue cidoc: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-7 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-8 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdfs: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-9 a mqio:MappingViolation ;
+    mqio:hasObjectValue b2022: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+<places-organizations-over-time.ttl> a mqio:MappingArtefact .
+

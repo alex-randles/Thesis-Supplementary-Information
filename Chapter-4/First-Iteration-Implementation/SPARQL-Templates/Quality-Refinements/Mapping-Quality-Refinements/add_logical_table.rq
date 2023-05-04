@@ -1,0 +1,12 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+INSERT
+{
+  ?tripleMap rr:subjectMap _:%s .
+   _:%s rr:class %s  ;
+        rr:template '%s' .
+}
+WHERE {
+  ?tripleMap ?predicate ?object .
+  FILTER(str(?tripleMap) = "%s").
+}

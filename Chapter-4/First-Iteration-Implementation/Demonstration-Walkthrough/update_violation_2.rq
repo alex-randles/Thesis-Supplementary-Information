@@ -1,0 +1,11 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#> 
+DELETE { ?subject rr:termType ?currentTermType  } 
+INSERT { ?subject rr:termType rr:IRI } 
+WHERE { 
+    SELECT ?subject ?currentTermType
+    WHERE {
+          ?subject ?predicate ?object . 
+          OPTIONAL { ?subject rr:termType ?currentTermType }
+          FILTER(str(?subject) = <Blank_Node>).
+    }
+}

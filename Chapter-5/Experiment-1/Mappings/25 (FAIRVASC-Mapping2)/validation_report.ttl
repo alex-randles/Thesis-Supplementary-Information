@@ -1,0 +1,11 @@
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <fairvasc.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+<fairvasc.ttl> a mqio:MappingArtefact .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport .
+

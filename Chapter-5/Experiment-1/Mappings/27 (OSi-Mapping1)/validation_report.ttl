@@ -1,0 +1,104 @@
+@prefix daq: <http://purl.org/eis/vocab/daq#> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping <mappingDAQobservation_2nd_Dump.ttl> ;
+    mqio:hasValidationReport ex:mappingValidationReport-0 .
+
+ex:mappingValidationReport-0 a mqio:MappingValidationReport ;
+    mqio:hasViolation ex:violation-0,
+        ex:violation-1,
+        ex:violation-10,
+        ex:violation-11,
+        ex:violation-12,
+        ex:violation-2,
+        ex:violation-3,
+        ex:violation-4,
+        ex:violation-5,
+        ex:violation-6,
+        ex:violation-7,
+        ex:violation-8,
+        ex:violation-9 .
+
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "ub34bL210C16"^^xsd:string ;
+    mqio:hasObjectValue daq:MetricProfile ;
+    mqio:hasResultMessage "Usage of undefined class."^^xsd:string ;
+    mqio:inTripleMap <#Profiling> ;
+    mqio:isDescribedBy mqio-metrics:D1 .
+
+ex:violation-1 a mqio:MappingViolation ;
+    mqio:hasLocation "ub34bL215C27"^^xsd:string ;
+    mqio:hasObjectValue daq:totalDatasetTriplesAssessed ;
+    mqio:hasResultMessage "Usage of undefined property."^^xsd:string ;
+    mqio:inTripleMap <#Profiling> ;
+    mqio:isDescribedBy mqio-metrics:D2 .
+
+ex:violation-10 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdf: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-11 a mqio:MappingViolation ;
+    mqio:hasLocation "ub34bL199C27"^^xsd:string ;
+    mqio:hasObjectValue prov:generated ;
+    mqio:hasResultMessage "Usage of incorrect domain."^^xsd:string ;
+    mqio:inTripleMap <#Observations> ;
+    mqio:isDescribedBy mqio-metrics:D3 .
+
+ex:violation-12 a mqio:MappingViolation ;
+    mqio:hasLocation "ub34bL174C22"^^xsd:string ;
+    mqio:hasObjectValue rr:Literal ;
+    mqio:hasResultMessage "Usage of incorrect range. Term type should be 'rr:IRI' or 'rr:BlankNode' for property 'sdmx-dimension:timePeriod'."^^xsd:string ;
+    mqio:inTripleMap <#Observations> ;
+    mqio:isDescribedBy mqio-metrics:D6 .
+
+ex:violation-2 a mqio:MappingViolation ;
+    mqio:hasObjectValue sdmx-dimension: ;
+    mqio:hasResultMessage "No Basic Provenance Information."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC3 .
+
+ex:violation-3 a mqio:MappingViolation ;
+    mqio:hasObjectValue sdmx-dimension: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-4 a mqio:MappingViolation ;
+    mqio:hasObjectValue daq: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-5 a mqio:MappingViolation ;
+    mqio:hasObjectValue prov: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-6 a mqio:MappingViolation ;
+    mqio:hasObjectValue rdf: ;
+    mqio:hasResultMessage "No Machine-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC4 .
+
+ex:violation-7 a mqio:MappingViolation ;
+    mqio:hasObjectValue sdmx-dimension: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-8 a mqio:MappingViolation ;
+    mqio:hasObjectValue daq: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+ex:violation-9 a mqio:MappingViolation ;
+    mqio:hasObjectValue prov: ;
+    mqio:hasResultMessage "No Human-Readable License."^^xsd:string ;
+    mqio:isDescribedBy mqio-metrics:VOC5 .
+
+<mappingDAQobservation_2nd_Dump.ttl> a mqio:MappingArtefact .
+

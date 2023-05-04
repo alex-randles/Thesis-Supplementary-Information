@@ -1,0 +1,22 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+SELECT ?sm ?termType
+WHERE {
+  ?subject rr:subjectMap ?sm .
+  ?sm      rr:termType   ?termType .
+  FILTER(?termType NOT IN (rr:IRI, rr:BlankNode))
+};
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+SELECT ?objectMap ?termType
+WHERE {
+  ?subject rr:predicateObjectMap ?pom .
+  ?pom rr:objectMap ?objectMap .
+  ?objectMap rr:termType ?termType .
+  FILTER(?termType NOT IN (rr:IRI, rr:BlankNode, rr:Literal))
+};
+SELECT ?predicateMap ?termType
+WHERE {
+  ?subject rr:predicateObjectMap ?pom .
+  ?pom rr:predicateMap ?predicateMap .
+  ?predicateMap rr:termType ?termType .
+  FILTER(?termType NOT IN (rr:IRI))
+}

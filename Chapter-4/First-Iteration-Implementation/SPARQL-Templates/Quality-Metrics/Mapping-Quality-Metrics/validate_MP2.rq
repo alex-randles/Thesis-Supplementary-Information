@@ -1,0 +1,7 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+SELECT DISTINCT ?tripleMap
+WHERE {
+  ?tripleMap rr:logicalTable|rml:logicalSource|rr:predicateObjectMap ?object .
+  FILTER NOT EXISTS { ?tripleMap rr:subjectMap ?sm . }
+}

@@ -1,0 +1,11 @@
+PREFIX oscd: <https://www.w3id.org/OSCD#>
+PREFIX rei-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#>
+SELECT ?detectionStart ?detectionEnd
+WHERE
+{
+  GRAPH ?changesGraph  {
+    ?policy a rei-policy:Policy ;
+            oscd:hasDetectionEnd ?detectionEnd;
+            oscd:hasDetectionStart ?detectionStart .
+  }
+}

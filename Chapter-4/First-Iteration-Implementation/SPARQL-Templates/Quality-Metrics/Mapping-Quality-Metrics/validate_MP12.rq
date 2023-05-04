@@ -1,0 +1,7 @@
+SELECT ?objectMap ?languageTag
+WHERE {
+    ?subject rr:predicateObjectMap ?pom.
+    ?pom rr:objectMap ?objectMap .  
+    ?objectMap rr:language ?languageTag .
+    FILTER (?languageTag NOT IN  %s) .
+}

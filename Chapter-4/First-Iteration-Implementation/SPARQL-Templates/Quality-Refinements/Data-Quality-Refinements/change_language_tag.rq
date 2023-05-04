@@ -1,0 +1,11 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+DELETE { ?objectMap rr:language %s }
+INSERT { ?objectMap rr:language '%s' }
+WHERE {
+SELECT ?objectMap
+WHERE {
+      ?objectMap ?p ?o .
+      OPTIONAL { ?objectMap rr:language %s . }
+      FILTER(str(?objectMap) = "%s").
+    }
+}

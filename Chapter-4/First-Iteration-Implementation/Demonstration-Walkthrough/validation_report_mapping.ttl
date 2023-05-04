@@ -1,0 +1,44 @@
+@prefix ex: <http://example.org/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix mqio-metrics: <https://w3id.org/MQIO-metrics/#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<#MappingRefinements>
+
+	rr:logicalTable [
+		  rr:tablename "REFINEMENTS";
+	];
+
+	rr:subjectMap [
+		rr:template "http://www.example.com/refinement-{ID}";
+		rr:class mqio:MappingRefinement;
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate mqio:hasRefinementQuery ;
+		rr:objectMap  [
+		    rr:column "REFINEMENT_QUERY";
+		    rr:datatype xsd:string;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate mqio:refinementName ;
+		rr:objectMap  [
+		    rr:column "REFINEMENT_NAME";
+		    rr:datatype xsd:string;
+  	    ];
+   ];
+
+	rr:predicateObjectMap [
+		rr:predicate mqio:refinedViolation ;
+		rr:objectMap  [
+			  rr:template "http://www.example.com/violation-{ID}";
+  	    ];
+   ];
+
+.

@@ -1,0 +1,16 @@
+PREFIX oscd: <https://www.w3id.org/OSCD#>
+PREFIX rei-constraint: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#>
+SELECT ?changeLog ?currentSource ?previousSource ?changeType ?threshold
+WHERE
+{
+  GRAPH ?changesGraph {
+    ?changeLog a oscd:ChangeLog;
+               oscd:hasCurrentSource ?currentSource ;
+               oscd:hasPreviousSource ?previousSource .
+  }
+   GRAPH ?notificationGraph  {
+    ?constraint a rei-constraint:SimpleConstraint;
+                rei-constraint:subject ?changeType;
+                rei-constraint:object ?threshold .
+  }
+}

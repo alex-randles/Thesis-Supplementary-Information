@@ -1,0 +1,60 @@
+@prefix oscd: <https://w3id.org/OSCD#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+@prefix rei-deontic: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> .
+@prefix rei-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> .
+@prefix rei-constraint: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> .
+
+###############################
+#    Changes in source data   #
+###############################
+
+<http://www.example.com/changeLog/user-1>
+  a oscd:ChangeLog ;
+  oscd:hasMaintainer <http://www.example.com/user-1>;
+  oscd:hasDetectionStart "2022-11-00T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDetectionEnd "2022-12-31T00:00:00.000000"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasCurrentVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0002a-JSON/student.json> ;
+  oscd:hasPreviousVersion <https://raw.githubusercontent.com/kg-construct/rml-test-cases/master/test-cases/RMLTC0001a-JSON/student.json>;
+  oscd:hasNotificationPolicy <http://www.example.com/notificationPolicy-1>; 
+  oscd:hasChange <http://www.example.com/insertChange-0>,
+				<http://www.example.com/insertChange-1> .
+
+<http://www.example.com/insertChange-1>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-01T09:56:01.286820"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasDataReference "ID";
+  oscd:hasChangedData "10";
+  oscd:wasChangedBy <http://www.example.com/user-1> .
+
+<http://www.example.com/insertChange-0>
+  a oscd:InsertSourceData ;
+  lode:atTime "2022-10-01T09:55:01.286844"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+  oscd:hasStructuralReference "Column";
+  oscd:hasChangedData "ID" ;
+  oscd:wasChangedBy <http://www.example.com/user-1> .
+ 
+###############################
+# Notification policy details #
+###############################
+
+<http://www.example.com/user-1> a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent>, <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+<http://www.example.com/notificationPolicy-1>
+  a rei-policy:Policy ;
+  rei-policy:desc "Notification policy for user 1" ;
+  rei-policy:grants <http://www.example.com/policyObligation-1> .
+
+<http://www.example.com/policyObligation-1>
+  a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> ;
+  rei-deontic:action <https://w3id.org/OSCD#sendNotification> ;
+  rei-deontic:obligedTo <https://w3id.org/OSCD#softwareAgent> ;
+  rei-deontic:startingConstraint <http://www.example.com/insertChangeConstraint-1> ;
+  rei-policy:actor <http://www.example.com/user-1>, <https://w3id.org/OSCD#softwareAgent> .
+
+<http://www.example.com/insertChangeConstraint-1>
+  a <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+  rei-constraint:object "50" ;
+  rei-constraint:predicate <https://w3id.org/OSCD#hasThreshold> ;
+  rei-constraint:subject <https://w3id.org/OSCD#InsertSourceData> .
+
