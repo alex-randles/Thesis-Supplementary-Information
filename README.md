@@ -127,7 +127,8 @@ This directory relates to **Section 5.7** and contains the following two sub-dir
 | Sub-Directory        | Description| 
 | :-------------:|:-------------:| 
 | [/OSi](./Chapter-5/Application-Study/OSi) [^1]| [Quality Reports](./Chapter-5/Application-Study/OSi) and Refined Mappings involved in the OSi use case in **Section 5.7.1** | 
-| [/Ericsson](./Chapter-5/Application-Study/Ericsson) [^2]| [Quality Reports](./Chapter-5/Application-Study/OSi) , [Change Logs](./Chapter-5/Application-Study/OSi)  and resulting refined mappings involved in the Ericsson use case in **Section 5.7.2** | 
+| [/Ericsson](./Chapter-5/Application-Study/Ericsson) [^2]| [Quality Reports](./Chapter-5/Application-Study/Ericsson/Mappings) , [Change Logs](./Chapter-5/Application-Study/Ericsson/Change-Logs)  
+and resulting refined mappings involved in the Ericsson use case in **Section 5.7.2** | 
 
 #### /Improvements
 This directory contains files associated with the SHACL[^3] shape generation proposed in **Section 5.8**,
