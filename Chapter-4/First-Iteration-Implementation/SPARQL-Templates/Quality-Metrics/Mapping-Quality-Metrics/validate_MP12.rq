@@ -1,7 +1,8 @@
-SELECT ?objectMap ?languageTag
+SELECT (COUNT(*) AS ?count)
 WHERE {
-    ?subject rr:predicateObjectMap ?pom.
-    ?pom rr:objectMap ?objectMap .  
-    ?objectMap rr:language ?languageTag .
-    FILTER (?languageTag NOT IN  %s) .
+    ?subject rr:predicateObjectMap ?pom;
+             rr:predicate  ?predicate .
+    ?pom rr:objectMap ?om .
+    ?om  rr:column ?column .
 }
+HAVING (?count > 1)
