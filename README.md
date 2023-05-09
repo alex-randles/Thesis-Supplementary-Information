@@ -28,7 +28,7 @@ This directory contains the following two sub-directories:
 The following abbreviations are used in these queries: 
 `?sm` is the identifier of a subject map. 
 `?pom` is the identifier of a predicate object map. 
-`?om` is the identifier of a object map. 
+`?om` is the identifier of an object map. 
 
 
 
@@ -53,12 +53,9 @@ An R2RML mapping
 is used to transform detected changes. 
 SPARQL queries in the directory are used to process and link the resulting graphs. 
 
-The **Sample-Graphs** folder contains a sample RDF graph represented in the Mapping Quality Improvement Ontology (MQIO)
+The [/Sample-Graphs](./Chapter-4/Sample-Graphs) folder contains a sample RDF graph represented in the Mapping Quality Improvement Ontology (MQIO)
 and Ontology for Source Change Detection (OSCD).
 
-
-&nbsp;
-&nbsp;
 &nbsp;
 &nbsp;
 &nbsp;
