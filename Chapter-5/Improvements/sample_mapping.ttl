@@ -14,7 +14,7 @@
   ];
 
   rr:subjectMap [ 
-    rr:template "http://example.com/{ID}/{FirstName}-{LastName}";
+    rr:template "http://example.com/{ID}/{FirstName}{LastName}";
     rr:class foaf:Person 
   ];
 

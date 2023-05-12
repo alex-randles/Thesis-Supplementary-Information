@@ -1,0 +1,9 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?email
+WHERE
+{
+  GRAPH ?contactDetailsGraph {
+	?user a foaf:Person;
+		  foaf:mbox ?email .
+  }
+}
