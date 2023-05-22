@@ -1,0 +1,112 @@
+<h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<style>
+span.courier-font { 
+	font-family:courier, courier new, serif;
+}
+</style>
+
+<center> 
+<figure>
+  <img src="./images/model.png" alt="Model diagram">
+  <figcaption><strong>Fig.1</strong> - Ontology class interaction diagram.</figcaption>
+</figure> 
+</center>
+
+<center> 
+<figure>
+  <img src="./images/reuse.png" alt="Reuse diagram">
+  <figcaption><strong>Fig.2</strong> - Reuse of the ontology.</figcaption>
+</figure> 
+</center>
+
+<p>
+<strong>Fig. 1</strong> shows the class interaction diagram of the ontology. The ontology describes 3 stages of mapping quality improvement. These stages are categorised as  mapping quality assessment,  mapping quality refinement and mapping quality validation.
+</p>
+
+<p>
+<strong>Mapping quality assessment. </strong>In this stage, the mapping artefact (<span class="courier-font">mqio:MappingArtefact</span>) 
+is assessed. The assessment activity is captured through the mqio:MappingAssessment class.
+The agent who initiated the process is also captured (<span class="courier-font">prov:Agent</span>). A mapping assessment activity may have quality
+ requirements which are captured through the <span class="courier-font">mqio:QualityRequirement</span>
+class. This information allows the ontology to validate whether such quality requirements have been satisfied in the assessment and 
+refinement stage. The ontology draws inspiration from
+DQV <a href="#bib-DQV">[DQV]</a> where data quality was classified into categories  (<span class="courier-font">dqv:Category</span>), 
+dimensions (<span class="courier-font">dqv:Dimension</span>) and metrics (<span class="courier-font">dqv:Metric</span>) <a href="#bib-ZaveriEtAl">[ZaveriEtAl]</a>. 
+The ontology uses the information in such classes
+to generate a mapping validation report (<span class="courier-font">mqio:MappingValidationReport</span>).
+ Each violation identified is then represented with the <span class="courier-font">mqio:MappingViolation</span> class.
+</p>
+<p>
+<strong>Mapping quality refinement. </strong>This stage captures mapping refinements executed on the mapping. 
+Each metric described using the ontology may have multiple refinements (<span class="courier-font">mqio:MappingRefinement</span>) associated with it depending on the 
+quality aspect being measured. The refinement executed in the mapping is associated with the identified violation through the property 
+(<span class="courier-font">mqio:wasRefinedBy</span>). In addition, refinements have scores representing the 
+likelihood the respective violation will be resolved.
+</p>
+<p>
+<strong>Mapping quality validation. </strong>
+Finally, the ontology provides quality information on the original mapping being assessed and the mapping which has been generated 
+as a result of the refinement. As mentioned, each mapping assessment process may have quality requirements which can be validated 
+at this stage. For instance, one may define a quality requirement for understandability related quality metrics to be of a particular value.
+In this stage, this can be validated by comparing the defined quality requirement and the resulting one.
+Requirements can be validated by identifying quality measurements (<span class="courier-font">dqv:QualityMeasurement</span>) associated 
+with the quality assessment of the mapping. 
+</p>
+
+
+
+<p>
+It was decided to commence the process by identifying concepts and
+relationships from the Data Quality Vocabulary (DQV) <a href="#bib-DQV">[DQV]</a>, which could be reused to represent relevant
+information in the MQIO. DQV is a prominent ontology designed to represent quality information related to LD
+datasets. The ontology contains concepts and relationships to represent quality measurements, metrics,
+dimensions, categories and associated metadata. However, it was discovered that DQV reuses the PROV
+Ontology (PROV-O) <a href="#bib-PROV-O">[PROV-O]</a> in order to represent activities and entities associated with the quality metadata, such as
+the quality assessment process of a dataset, as DQV does not provide suitable concepts for representing related
+activities and entities. PROV-O is a W3C recommendation designed to represent LD provenance and contains
+concepts to represent generalized provenance related activities and entities captured in the LD domain.
+Therefore, it was decided to reuse PROV-O in a similar manner to the DQV. However, it was discovered that it
+would be required to extend the ontology in order to capture domain specific information required for the MQIO.
+For instance, the quality assessment and refinement of a mapping are two separate activities, which should be
+distinguished between in order to support sufficient interoperability. PROV-O includes a single concept to
+represent general activities (<span class="courier-font">prov:Activity</span>) and it would not be possible for a machine to automatically
+determine differences between information related to quality assessment and refinement activities, as these
+would be represented by the same concept. Similar constraints apply to the entities (<span class="courier-font">prov:Entity</span>) involved in
+the MQIO model, such as the mapping itself (<span class="courier-font">mqio:MappingArtefact</span>) 
+and associated quality reports
+(<span class="courier-font">mqio:MappingValidationReport</span>), which must have a distinguishable different meaning. Therefore, it
+was decided to extend PROV-O in order to capture the domain specific concepts required in an ontology designed
+to represent information related to the quality improvement of mappings. An ontology fully reliant on concepts
+in the DQV and PROV-O would result in a semantic inoperable model, drastically limiting the ability to support
+quality assessment and refinement of mappings by agents.
+
+
+</p>
+
+
+
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>mqio:</b></td><td>&lt;https://www.w3id.org/MQIO/#&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>mqio:</b></td><td>&lt;https://www.w3id.org/MQIO&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>dqv</b></td><td>&lt;http://www.w3.org/ns/dqv&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>

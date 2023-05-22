@@ -1,0 +1,301 @@
+<https://www.w3id.org/MQIO#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/abstract> "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.nges that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality. This ontology is licensed under the Attribution (CC BY) License." .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/created> "01 May 2023" .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/creator> "Ademar Crotti Junior" .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/creator> "Alex Randles" .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/creator> "Declan O'Sullivan" .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> .
+<https://www.w3id.org/MQIO#> <http://purl.org/dc/terms/title> "Mapping Quality Improvement Ontology (MQIO)" .
+<https://www.w3id.org/MQIO#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqio:" .
+<https://www.w3id.org/MQIO#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/MQIO/#" .
+<https://www.w3id.org/MQIO#> <http://www.w3.org/2002/07/owl#versionInfo> "v1.3" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/MQIO#assessedMapping
+<https://www.w3id.org/MQIO#assessedMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#assessedMapping> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingAssessment> .
+<https://www.w3id.org/MQIO#assessedMapping> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#assessedMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "The mapping assessed by the quality assessment process." .
+<https://www.w3id.org/MQIO#assessedMapping> <http://www.w3.org/2000/01/rdf-schema#label> "assessedMapping"@en .
+# 
+# https://www.w3id.org/MQIO#hasMappingSource
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The original mapping artefact from which the refined mapping was derived." .
+<https://www.w3id.org/MQIO#hasMappingSource> <http://www.w3.org/2000/01/rdf-schema#label> "hasMappingSource"@en .
+# 
+# https://www.w3id.org/MQIO#hasObjectValue
+<https://www.w3id.org/MQIO#hasObjectValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The object value associated with the violation." .
+<https://www.w3id.org/MQIO#hasObjectValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasObjectValue"@en .
+# 
+# https://www.w3id.org/MQIO#hasQualityRequirement
+<https://www.w3id.org/MQIO#hasQualityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasQualityRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingAssessment> .
+<https://www.w3id.org/MQIO#hasQualityRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#QualityRequirement> .
+<https://www.w3id.org/MQIO#hasQualityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality requirements associated with a mapping assessment." .
+<https://www.w3id.org/MQIO#hasQualityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "hasQualityRequirement"@en .
+# 
+# https://www.w3id.org/MQIO#hasRefinement
+<https://www.w3id.org/MQIO#hasRefinement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasRefinement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dqv#Metric> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#hasRefinement> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#hasRefinement> <http://www.w3.org/2000/01/rdf-schema#comment> "The refinement used for refining a quality violation detected by a specific quality metric." .
+<https://www.w3id.org/MQIO#hasRefinement> <http://www.w3.org/2000/01/rdf-schema#label> "hasRefinement"@en .
+# 
+# https://www.w3id.org/MQIO#hasValidationReport
+<https://www.w3id.org/MQIO#hasValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasValidationReport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingAssessment> .
+<https://www.w3id.org/MQIO#hasValidationReport> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingValidationReport> .
+<https://www.w3id.org/MQIO#hasValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "The mapping quality validation report generated by the quality assessment process." .
+<https://www.w3id.org/MQIO#hasValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "hasValidationReport"@en .
+# 
+# https://www.w3id.org/MQIO#hasViolation
+<https://www.w3id.org/MQIO#hasViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#hasViolation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingValidationReport> .
+<https://www.w3id.org/MQIO#hasViolation> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#hasViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping quality violation contained within a mapping validation report." .
+<https://www.w3id.org/MQIO#hasViolation> <http://www.w3.org/2000/01/rdf-schema#label> "hasViolation"@en .
+# 
+# https://www.w3id.org/MQIO#inTripleMap
+<https://www.w3id.org/MQIO#inTripleMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#inTripleMap> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#inTripleMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://www.w3id.org/MQIO#inTripleMap> <http://www.w3.org/2000/01/rdf-schema#comment> "The triple map where the violation occurred." .
+<https://www.w3id.org/MQIO#inTripleMap> <http://www.w3.org/2000/01/rdf-schema#label> "inTripleMap"@en .
+# 
+# https://www.w3id.org/MQIO#isDescribedBy
+<https://www.w3id.org/MQIO#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#Metric> .
+<https://www.w3id.org/MQIO#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality metric which detected the violation." .
+<https://www.w3id.org/MQIO#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isDescribedBy"@en .
+# 
+# https://www.w3id.org/MQIO#refinedViolation
+<https://www.w3id.org/MQIO#refinedViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#refinedViolation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#refinedViolation> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#refinedViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "The violation which was refined." .
+<https://www.w3id.org/MQIO#refinedViolation> <http://www.w3.org/2000/01/rdf-schema#label> "refinedViolation"@en .
+# 
+# https://www.w3id.org/MQIO#usedTool
+<https://www.w3id.org/MQIO#usedTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#usedTool> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#usedTool> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingTool> .
+<https://www.w3id.org/MQIO#usedTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool which has been used to create a mapping." .
+<https://www.w3id.org/MQIO#usedTool> <http://www.w3.org/2000/01/rdf-schema#label> "usedTool"@en .
+# 
+# https://www.w3id.org/MQIO#wasCreatedBy
+<https://www.w3id.org/MQIO#wasCreatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#wasCreatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#wasCreatedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/MQIO#MappingRefinement> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#wasCreatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent or mapping quality refinement process which produced the mapping artefact." .
+<https://www.w3id.org/MQIO#wasCreatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "wasCreatedBy"@en .
+# 
+# https://www.w3id.org/MQIO#wasExecuted
+<https://www.w3id.org/MQIO#wasExecuted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#wasExecuted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingAssessment> .
+<https://www.w3id.org/MQIO#wasExecuted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#Metric> .
+<https://www.w3id.org/MQIO#wasExecuted> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality metric executed by the mapping quality assessment process." .
+<https://www.w3id.org/MQIO#wasExecuted> <http://www.w3.org/2000/01/rdf-schema#label> "wasExecuted"@en .
+# 
+# https://www.w3id.org/MQIO#wasRefinedBy
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/MQIO#refinedViolation> .
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The refinement used to refine a quality violation." .
+<https://www.w3id.org/MQIO#wasRefinedBy> <http://www.w3.org/2000/01/rdf-schema#label> "wasRefinedBy"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/MQIO#hasConfidence
+<https://www.w3id.org/MQIO#hasConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://www.w3id.org/MQIO#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelihood a refinement will resolve the violation." .
+<https://www.w3id.org/MQIO#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "hasConfidence"@en .
+# 
+# https://www.w3id.org/MQIO#hasLiteralValue
+<https://www.w3id.org/MQIO#hasLiteralValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The literal value associated with the violation." .
+<https://www.w3id.org/MQIO#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasLiteralValue"@en .
+# 
+# https://www.w3id.org/MQIO#hasLocation
+<https://www.w3id.org/MQIO#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The location of a violation within the mapping." .
+<https://www.w3id.org/MQIO#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "hasLocation"@en .
+# 
+# https://www.w3id.org/MQIO#hasPurpose
+<https://www.w3id.org/MQIO#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingArtefact> .
+<https://www.w3id.org/MQIO#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "The rationale for the mapping artefact being created." .
+<https://www.w3id.org/MQIO#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "hasPurpose"@en .
+# 
+# https://www.w3id.org/MQIO#hasRefinementName
+<https://www.w3id.org/MQIO#hasRefinementName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasRefinementName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#hasRefinementName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#hasRefinementName> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of a refinement." .
+<https://www.w3id.org/MQIO#hasRefinementName> <http://www.w3.org/2000/01/rdf-schema#label> "hasRefinementName"@en .
+# 
+# https://www.w3id.org/MQIO#hasResultMessage
+<https://www.w3id.org/MQIO#hasResultMessage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#hasResultMessage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#hasResultMessage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#hasResultMessage> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of a violation." .
+<https://www.w3id.org/MQIO#hasResultMessage> <http://www.w3.org/2000/01/rdf-schema#label> "hasResultMessage"@en .
+# 
+# https://www.w3id.org/MQIO#isSatisfied
+<https://www.w3id.org/MQIO#isSatisfied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#QualityRequirement> .
+<https://www.w3id.org/MQIO#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://www.w3id.org/MQIO#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the quality requirements associated with a mapping." .
+<https://www.w3id.org/MQIO#isSatisfied> <http://www.w3.org/2000/01/rdf-schema#label> "isSatisfied"@en .
+# 
+# https://www.w3id.org/MQIO#usedQuery
+<https://www.w3id.org/MQIO#usedQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/MQIO#usedQuery> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/MQIO#MappingRefinement> .
+<https://www.w3id.org/MQIO#usedQuery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://www.w3id.org/MQIO#usedQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "A query executed by a refinement." .
+<https://www.w3id.org/MQIO#usedQuery> <http://www.w3.org/2000/01/rdf-schema#label> "usedQuery"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+# 
+# http://www.w3.org/ns/dqv#Metric
+# 
+# http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Agent
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/MQIO#MappingArtefact
+<https://www.w3id.org/MQIO#MappingArtefact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://www.w3id.org/MQIO#MappingArtefact> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3id.org/MQIO#MappingValidationReport> .
+<https://www.w3id.org/MQIO#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping artefact contains rules which link or create linked data datasets." .
+<https://www.w3id.org/MQIO#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#label> "MappingArtefact"@en .
+# 
+# https://www.w3id.org/MQIO#MappingAssessment
+<https://www.w3id.org/MQIO#MappingAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://www.w3id.org/MQIO#MappingAssessment> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3id.org/MQIO#MappingValidationReport> .
+<https://www.w3id.org/MQIO#MappingAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity in which the quality of a mapping artefact is assessed, generating information on quality issues within the mapping." .
+<https://www.w3id.org/MQIO#MappingAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "MappingAssessment"@en .
+# 
+# https://www.w3id.org/MQIO#MappingRefinement
+<https://www.w3id.org/MQIO#MappingRefinement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingRefinement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://www.w3id.org/MQIO#MappingRefinement> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3id.org/MQIO#MappingValidationReport> .
+<https://www.w3id.org/MQIO#MappingRefinement> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity which involves removing quality violations detected in a mapping artefact." .
+<https://www.w3id.org/MQIO#MappingRefinement> <http://www.w3.org/2000/01/rdf-schema#label> "MappingRefinement"@en .
+# 
+# https://www.w3id.org/MQIO#MappingTool
+<https://www.w3id.org/MQIO#MappingTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingTool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://www.w3id.org/MQIO#MappingTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping tool is any tool used during the creation of a mapping." .
+<https://www.w3id.org/MQIO#MappingTool> <http://www.w3.org/2000/01/rdf-schema#label> "MappingTool"@en .
+# 
+# https://www.w3id.org/MQIO#MappingValidationReport
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3id.org/MQIO#MappingViolation> .
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3id.org/MQIO#QualityRequirement> .
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping validation report contains information related to quality violations contained within a mapping artefact." .
+<https://www.w3id.org/MQIO#MappingValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "MappingValidationReport"@en .
+# 
+# https://www.w3id.org/MQIO#MappingViolation
+<https://www.w3id.org/MQIO#MappingViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#MappingViolation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://www.w3id.org/MQIO#MappingViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping violation is a quality issue present within a mapping." .
+<https://www.w3id.org/MQIO#MappingViolation> <http://www.w3.org/2000/01/rdf-schema#label> "MappingViolation"@en .
+# 
+# https://www.w3id.org/MQIO#QualityRequirement
+<https://www.w3id.org/MQIO#QualityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/MQIO#QualityRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://www.w3id.org/MQIO#QualityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality requirement is a requirement a mapping should satisfy." .
+<https://www.w3id.org/MQIO#QualityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "QualityRequirement"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

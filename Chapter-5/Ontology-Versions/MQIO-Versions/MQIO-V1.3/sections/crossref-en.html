@@ -1,0 +1,955 @@
+<h2 id="crossreference" class="list">Cross-reference for Mapping Quality Improvement Ontology (MQIO) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Mapping Quality Improvement Ontology (MQIO).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingTool" title="https://www.w3id.org/MQIO#MappingTool">MappingTool</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+            title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#QualityRequirement" title="https://www.w3id.org/MQIO#QualityRequirement">QualityRequirement</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingArtefact">
+      <h3>MappingArtefact<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingArtefact</p>
+      <div class="comment">
+         <span class="markdown">A mapping artefact contains rules which link or create linked data datasets.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasMappingSource" title="https://www.w3id.org/MQIO#hasMappingSource">hasMappingSource</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#hasPurpose" title="https://www.w3id.org/MQIO#hasPurpose">hasPurpose</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#usedTool" title="https://www.w3id.org/MQIO#usedTool">usedTool</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#wasCreatedBy" title="https://www.w3id.org/MQIO#wasCreatedBy">wasCreatedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#assessedMapping" title="https://www.w3id.org/MQIO#assessedMapping">assessedMapping</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#hasMappingSource" title="https://www.w3id.org/MQIO#hasMappingSource">hasMappingSource</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+               title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingAssessment">
+      <h3>MappingAssessment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingAssessment</p>
+      <div class="comment">
+         <span class="markdown">An activity in which the quality of a mapping artefact is assessed, generating information on quality issues within the mapping.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#assessedMapping" title="https://www.w3id.org/MQIO#assessedMapping">assessedMapping</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#hasQualityRequirement" title="https://www.w3id.org/MQIO#hasQualityRequirement">hasQualityRequirement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#hasValidationReport" title="https://www.w3id.org/MQIO#hasValidationReport">hasValidationReport</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#wasExecuted" title="https://www.w3id.org/MQIO#wasExecuted">wasExecuted</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+               title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingRefinement">
+      <h3>MappingRefinement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingRefinement</p>
+      <div class="comment">
+         <span class="markdown">An activity which involves removing quality violations detected in a mapping artefact.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasConfidence" title="https://www.w3id.org/MQIO#hasConfidence">hasConfidence</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#hasRefinementName" title="https://www.w3id.org/MQIO#hasRefinementName">hasRefinementName</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#refinedViolation" title="https://www.w3id.org/MQIO#refinedViolation">refinedViolation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#usedQuery" title="https://www.w3id.org/MQIO#usedQuery">usedQuery</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasRefinement" title="https://www.w3id.org/MQIO#hasRefinement">hasRefinement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#wasRefinedBy" title="https://www.w3id.org/MQIO#wasRefinedBy">wasRefinedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+               title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingTool">
+      <h3>MappingTool<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingTool</p>
+      <div class="comment">
+         <span class="markdown">A mapping tool is any tool used during the creation of a mapping.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#usedTool" title="https://www.w3id.org/MQIO#usedTool">usedTool</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingValidationReport">
+      <h3>MappingValidationReport<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingValidationReport</p>
+      <div class="comment">
+         <span class="markdown">A mapping validation report contains information related to quality violations contained within a mapping artefact.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasViolation" title="https://www.w3id.org/MQIO#hasViolation">hasViolation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasValidationReport" title="https://www.w3id.org/MQIO#hasValidationReport">hasValidationReport</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/MQIO#QualityRequirement" title="https://www.w3id.org/MQIO#QualityRequirement">QualityRequirement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#MappingViolation">
+      <h3>MappingViolation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#MappingViolation</p>
+      <div class="comment">
+         <span class="markdown">A mapping violation is a quality issue present within a mapping.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasLiteralValue" title="https://www.w3id.org/MQIO#hasLiteralValue">hasLiteralValue</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#hasLocation" title="https://www.w3id.org/MQIO#hasLocation">hasLocation</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#hasObjectValue" title="https://www.w3id.org/MQIO#hasObjectValue">hasObjectValue</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#hasResultMessage" title="https://www.w3id.org/MQIO#hasResultMessage">hasResultMessage</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/MQIO#inTripleMap" title="https://www.w3id.org/MQIO#inTripleMap">inTripleMap</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#isDescribedBy" title="https://www.w3id.org/MQIO#isDescribedBy">isDescribedBy</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#wasRefinedBy" title="https://www.w3id.org/MQIO#wasRefinedBy">wasRefinedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasViolation" title="https://www.w3id.org/MQIO#hasViolation">hasViolation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/MQIO#refinedViolation" title="https://www.w3id.org/MQIO#refinedViolation">refinedViolation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+               title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#QualityRequirement">
+      <h3>QualityRequirement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#QualityRequirement</p>
+      <div class="comment">
+         <span class="markdown">A quality requirement is a requirement a mapping should satisfy.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#isSatisfied" title="https://www.w3id.org/MQIO#isSatisfied">isSatisfied</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#hasQualityRequirement" title="https://www.w3id.org/MQIO#hasQualityRequirement">hasQualityRequirement</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+               title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/MQIO#assessedMapping" title="https://www.w3id.org/MQIO#assessedMapping">assessedMapping</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasMappingSource" title="https://www.w3id.org/MQIO#hasMappingSource">hasMappingSource</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasObjectValue" title="https://www.w3id.org/MQIO#hasObjectValue">hasObjectValue</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasQualityRequirement" title="https://www.w3id.org/MQIO#hasQualityRequirement">hasQualityRequirement</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasRefinement" title="https://www.w3id.org/MQIO#hasRefinement">hasRefinement</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasValidationReport" title="https://www.w3id.org/MQIO#hasValidationReport">hasValidationReport</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasViolation" title="https://www.w3id.org/MQIO#hasViolation">hasViolation</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#inTripleMap" title="https://www.w3id.org/MQIO#inTripleMap">inTripleMap</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#isDescribedBy" title="https://www.w3id.org/MQIO#isDescribedBy">isDescribedBy</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#refinedViolation" title="https://www.w3id.org/MQIO#refinedViolation">refinedViolation</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#usedTool" title="https://www.w3id.org/MQIO#usedTool">usedTool</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#wasCreatedBy" title="https://www.w3id.org/MQIO#wasCreatedBy">wasCreatedBy</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#wasExecuted" title="https://www.w3id.org/MQIO#wasExecuted">wasExecuted</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#wasRefinedBy" title="https://www.w3id.org/MQIO#wasRefinedBy">wasRefinedBy</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/MQIO#assessedMapping">
+      <h3>assessedMapping<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#assessedMapping</p>
+      <div class="comment">
+         <span class="markdown">The mapping assessed by the quality assessment process.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasMappingSource">
+      <h3>hasMappingSource<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasMappingSource</p>
+      <div class="comment">
+         <span class="markdown">The original mapping artefact from which the refined mapping was derived.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasObjectValue">
+      <h3>hasObjectValue<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasObjectValue</p>
+      <div class="comment">
+         <span class="markdown">The object value associated with the violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasQualityRequirement">
+      <h3>hasQualityRequirement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasQualityRequirement</p>
+      <div class="comment">
+         <span class="markdown">The quality requirements associated with a mapping assessment.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#QualityRequirement" title="https://www.w3id.org/MQIO#QualityRequirement">QualityRequirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasRefinement">
+      <h3>hasRefinement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasRefinement</p>
+      <div class="comment">
+         <span class="markdown">The refinement used for refining a quality violation detected by a specific quality metric.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/dqv#Metric"
+                  target="_blank"
+                  title="http://www.w3.org/ns/dqv#Metric">metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasValidationReport">
+      <h3>hasValidationReport<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasValidationReport</p>
+      <div class="comment">
+         <span class="markdown">The mapping quality validation report generated by the quality assessment process.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+                  title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasViolation">
+      <h3>hasViolation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasViolation</p>
+      <div class="comment">
+         <span class="markdown">A mapping quality violation contained within a mapping validation report.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingValidationReport"
+                  title="https://www.w3id.org/MQIO#MappingValidationReport">MappingValidationReport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#inTripleMap">
+      <h3>inTripleMap<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#inTripleMap</p>
+      <div class="comment">
+         <span class="markdown">The triple map where the violation occurred.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Resource">resource</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#isDescribedBy">
+      <h3>isDescribedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#isDescribedBy</p>
+      <div class="comment">
+         <span class="markdown">The quality metric which detected the violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/dqv#Metric"
+                  target="_blank"
+                  title="http://www.w3.org/ns/dqv#Metric">metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#refinedViolation">
+      <h3>refinedViolation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#refinedViolation</p>
+      <div class="comment">
+         <span class="markdown">The violation which was refined.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#wasRefinedBy" title="https://www.w3id.org/MQIO#wasRefinedBy">wasRefinedBy</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#usedTool">
+      <h3>usedTool<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#usedTool</p>
+      <div class="comment">
+         <span class="markdown">A tool which has been used to create a mapping.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingTool" title="https://www.w3id.org/MQIO#MappingTool">MappingTool</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#wasCreatedBy">
+      <h3>wasCreatedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#wasCreatedBy</p>
+      <div class="comment">
+         <span class="markdown">The agent or mapping quality refinement process which produced the mapping artefact.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/prov#Agent"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#wasExecuted">
+      <h3>wasExecuted<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#wasExecuted</p>
+      <div class="comment">
+         <span class="markdown">A quality metric executed by the mapping quality assessment process.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingAssessment" title="https://www.w3id.org/MQIO#MappingAssessment">MappingAssessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/dqv#Metric"
+                  target="_blank"
+                  title="http://www.w3.org/ns/dqv#Metric">metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#wasRefinedBy">
+      <h3>wasRefinedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#wasRefinedBy</p>
+      <div class="comment">
+         <span class="markdown">The refinement used to refine a quality violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#refinedViolation" title="https://www.w3id.org/MQIO#refinedViolation">refinedViolation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasConfidence" title="https://www.w3id.org/MQIO#hasConfidence">hasConfidence</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasLiteralValue" title="https://www.w3id.org/MQIO#hasLiteralValue">hasLiteralValue</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasLocation" title="https://www.w3id.org/MQIO#hasLocation">hasLocation</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasPurpose" title="https://www.w3id.org/MQIO#hasPurpose">hasPurpose</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasRefinementName" title="https://www.w3id.org/MQIO#hasRefinementName">hasRefinementName</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#hasResultMessage" title="https://www.w3id.org/MQIO#hasResultMessage">hasResultMessage</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#isSatisfied" title="https://www.w3id.org/MQIO#isSatisfied">isSatisfied</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/MQIO#usedQuery" title="https://www.w3id.org/MQIO#usedQuery">usedQuery</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasConfidence">
+      <h3>hasConfidence<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasConfidence</p>
+      <div class="comment">
+         <span class="markdown">The likelihood a refinement will resolve the violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasLiteralValue">
+      <h3>hasLiteralValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasLiteralValue</p>
+      <div class="comment">
+         <span class="markdown">The literal value associated with the violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasLocation">
+      <h3>hasLocation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasLocation</p>
+      <div class="comment">
+         <span class="markdown">The location of a violation within the mapping.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasPurpose">
+      <h3>hasPurpose<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasPurpose</p>
+      <div class="comment">
+         <span class="markdown">The rationale for the mapping artefact being created.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingArtefact" title="https://www.w3id.org/MQIO#MappingArtefact">MappingArtefact</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasRefinementName">
+      <h3>hasRefinementName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasRefinementName</p>
+      <div class="comment">
+         <span class="markdown">A textual description of a refinement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#hasResultMessage">
+      <h3>hasResultMessage<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#hasResultMessage</p>
+      <div class="comment">
+         <span class="markdown">A textual description of a violation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingViolation" title="https://www.w3id.org/MQIO#MappingViolation">MappingViolation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#isSatisfied">
+      <h3>isSatisfied<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#isSatisfied</p>
+      <div class="comment">
+         <span class="markdown">The status of the quality requirements associated with a mapping.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#QualityRequirement" title="https://www.w3id.org/MQIO#QualityRequirement">QualityRequirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/MQIO#usedQuery">
+      <h3>usedQuery<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/MQIO#usedQuery</p>
+      <div class="comment">
+         <span class="markdown">A query executed by a refinement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/MQIO#MappingRefinement" title="https://www.w3id.org/MQIO#MappingRefinement">MappingRefinement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

@@ -1,0 +1,121 @@
+
+
+<div id="references">
+	<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+      	<ul>
+	<li id="bib-DaQ"><strong>[DaQ]</strong>
+	    
+	    Jeremy Debattista; Christoph Lange; Sören Auer. <a href="http://ceur-ws.org/Vol-1184/ldow2014_paper_09.pdf" property="dc:references"><cite>daQ, an Ontology for Dataset Quality Information</cite></a>. 2014. LDOW 2014. URL: <a href="http://ceur-ws.org/Vol-1184/ldow2014_paper_09.pdf" property="dc:references">http://ceur-ws.org/Vol-1184/ldow2014_paper_09.pdf</a>
+
+	
+	</li>
+	<li id="bib-PROV-O"><strong>[PROV-O]</strong>
+	
+	      Timothy Lebo; Satya Sahoo; Deborah McGuinness. W3C. <a href="https://www.w3.org/TR/prov-o/" property="dc:references"><cite>PROV-O: The PROV Ontology</cite></a>. 30 April 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/prov-o/" property="dc:references">https://www.w3.org/TR/prov-o/</a>       
+
+	
+	</li>
+	
+		<!-- 	<li id="bib-SHACL"><strong>[SHACL]</strong>
+	
+	    Holger Knublauch; Arthur Ryman. <a href="https://www.w3.org/TR/shacl/" property="dc:references"><cite>Shapes Constraint Language (SHACL)</cite></a>. 28 January 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/shacl/" property="dc:references">https://www.w3.org/TR/shacl/</a>        
+
+	
+	</li> -->
+
+
+	<li id="bib-ZaveriEtAl">
+	<strong>[ZaveriEtAl]</strong>
+	
+	     Amrapali Zaveri; Anisa Rula; Andrea Maurino; Ricardo Pietrobon; Jens Lehmann; Sören Auer. <a href="https://dx.doi.org/10.3233/SW-150175" property="dc:references"><cite>Quality assessment for Linked Data: A Survey</cite></a>. Semantic Web, vol. 7, no. 1, pp. 63-93, 2015. URL: <a href="https://dx.doi.org/10.3233/SW-150175" property="dc:references">https://dx.doi.org/10.3233/SW-150175</a>
+
+	
+	
+	</li>
+	<li id="bib-DQV"><strong>[DQV]</strong>
+	
+	
+	      Riccardo Albertoni,; Antoine Isaac. <a href="https://www.w3.org/TR/vocab-dqv/"  property="dc:references"><cite> Data on the web best practices: Data quality vocabulary. (DQV)</cite></a> . 15 December 2016. W3C Working Draft. URL: <a href="https://www.w3.org/TR/vocab-dqv/"  property="dc:references">https://www.w3.org/TR/vocab-dqv/</a>   
+
+	
+	
+	</li>
+	</ul>
+
+</div>
+
+<h2 id="ref" class="list">Appendix <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+A sample instance graph detailing a quality report expressed in the MQIO is presented below. 
+<table style="width:80%;">
+  <tr>
+    <td>
+    <pre><code>@prefix ex: &lt;http://example.org/&gt; .
+@prefix mqio: &lt;https://w3id.org/MQIO#&gt; .
+@prefix mqio-metric: &lt;https://w3id.org/MQIO-metrics#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix rr: &lt;http://www.w3.org/ns/r2rml#&gt; .
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;.
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt;.
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.
+@prefix geo: &lt;http://www.opengis.net/ont/geosparql#&gt;.
+
+&lt;osi-mapping.ttl&gt; a mqio:MappingArtefact ;
+    mqio:wasCreatedBy ex:user-1;
+    mqio:hasPurpose "Research Project" ; 
+    prov:generatedAtTime  "2022-01-18T17:31:01.286820"^^xsd:dateTime . 
+
+ex:mappingQualityAssessment a mqio:MappingAssessment ;
+    mqio:assessedMapping &lt;osi-mapping.ttl&gt; ;
+    mqio:wasExecuted mqio-metric:D2 ;
+    mqio:usedTool ex:mappingEditor ;
+    prov:wasAssociatedWith ex:user-1; 
+    prov:endedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
+    mqio:hasQualityRequirement ex:qualityRequirement; 
+    mqio:hasValidationReport ex:mappingValidationReport .
+
+ex:mappingValidationReport a mqio:MappingValidationReport ;
+    prov:generatedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
+    mqio:hasViolation ex:violation-0 . 
+    
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-1" ;
+    mqio:hasObjectValue geo:asWTK ;
+    mqio:inTripleMap &lt;#TripleMap1&gt; ;
+    mqio:isDescribedBy mqio:metric-D2 ;
+    mqio:hasResultMessage "Usage of undefined property." .
+
+ex:refinement-0 a mqio:MappingRefinement ;
+    mqio:usedQuery """
+         PREFIX rr: &lt;http://www.w3.org/ns/r2rml#&gt;
+         DELETE { ?predicateObjectMap rr:predicate ?property }
+         INSERT { ?predicateObjectMap rr:predicate &lt;http://www.opengis.net/ont/geosparql#asWKT&gt; }
+         WHERE  {
+                SELECT ?predicateObjectMap ?property
+                WHERE {
+                      ?predicateObjectMap rr:predicate ?property.
+                      FILTER(str(?predicateObjectMap) = &lt;BLANK_ID&gt;).
+                 }
+                }
+               """ ;
+    mqio:hasConfidence "0.75"^^xsd:double; 
+    prov:endedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
+    prov:wasAssociatedWith ex:user-1; 
+    mqio:hasRefinementName "Find Similar Predicates"; 
+    mqio:refinedViolation ex:violation-0 .
+    
+ex:qualityRequirement a mqio:QualityRequirement;
+    rdfs:comment "Quality requirement associated with the mapping."; 
+    mqio:isSatisifed  "true"^^xsd:boolean ;
+    dqv:hasQualityMeasurement ex:qualityMeasurement-1, ex:qualityMeasurement-2 .
+    
+    
+    </code></pre>
+</td>
+   
+  </tr>
+</table> 
+

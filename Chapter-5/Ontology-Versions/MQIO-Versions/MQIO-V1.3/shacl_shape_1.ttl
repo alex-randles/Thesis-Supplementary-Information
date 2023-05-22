@@ -1,0 +1,14 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+@prefix mqio: <https://w3id.org/MQIO#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#>.
+
+ex:validateQualityRequirements
+    a sh:NodeShape ;
+    sh:targetClass mqio:QualityRequirement ;
+    sh:property [
+		sh:path dqv:hasQualityMeasurement  ;
+		sh:minCount 1;
+		sh:message "No measurements associated with this quality requirement." ;
+    ] .

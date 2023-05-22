@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Mapping Quality Improvement Ontology (MQIO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.w3id.org/MQIO/#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.w3id.org/MQIO/#","name":"Mapping Quality Improvement Ontology (MQIO)", "headline":"The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.nges that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality. This ontology is licensed under the Attribution (CC BY) License.", "datePublished":"01 May 2023", "version":"v1.3", "license":"http://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Ademar Crotti Junior"},{"@type":"Person","name":"Alex Randles"},{"@type":"Person","name":"Declan O'Sullivan"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Mapping Quality Improvement Ontology (MQIO)</h1>
+<h2>Release 01 May 2023</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://www.w3id.org/MQIO/#">https://www.w3id.org/MQIO/#</a></dd>
+<dt>Revision:</dt>
+<dd>v1.3</dd>
+<dt>Authors:</dt>
+<dd>Ademar Crotti Junior</dd><dd>Alex Randles</dd><dd>Declan O'Sullivan</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="http://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Ademar Crotti Junior, Alex Randles, Declan O'Sullivan. Mapping Quality Improvement Ontology (MQIO). Revision: v1.3.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+
+<p>
+The authors would like to thank <a href="https://www.adaptcentre.ie/">ADAPT Centre</a> and <a href="https://www.sfi.ie/">Science Foundation Ireland (SFI)</a> for supporting the 
+development of this project.
+</p>
+
+
+
+</div>
+</body>
+</html>
