@@ -173,8 +173,8 @@
     rr:predicateObjectMap [
         rr:predicate sdmx-dimension:timePeriod ;
         rr:objectMap [
-        	rr:termType rr:Literal ;
-			rr:template "{ASSESSMENT_DATE}";
+        	rr:termType rr:IRI ;
+			rr:template "http://data.example.com/1spatialassessment/{ASSESSMENT_DATE}";
         ];
     ] ;
     rr:predicateObjectMap [
@@ -197,6 +197,16 @@
         rr:predicate prov:wasGeneratedBy ;
         rr:object <http://data.example.com/1spatialassessment/r2rmlconverter/>
     ] ;
+.
+
+
+<#Observations>
+    rr:logicalTable <#Observation-View> ;
+    rr:subjectMap [
+	  	rr:template "http://data.example.com/1spatialassessment/activity/{METRIC}-{VALIDATION_BATCH_ID}";
+	    rr:class prov:Activity ;
+		rr:graph <http://data.example.com/1spatialassessment/quality-graph> ;
+    ] ;
     rr:predicateObjectMap [
         rr:predicate prov:generated ;
         rr:objectMap [
@@ -210,11 +220,11 @@
 	rr:logicalTable <#Observation-View> ;
 	rr:subjectMap [
 		rr:template "http://data.example.com/1spatialassessment/observation/{METRIC}-{VALIDATION_BATCH_ID}-profiling" ;
-	    rr:class daq:MetricProfile ;
+	    rr:class daq:Metric ;
 		rr:graph <http://data.example.com/1spatialassessment/quality-graph>
     ] ;
     rr:predicateObjectMap [
-        rr:predicate daq:totalDatasetTriplesAssessed ; # this might be changed if we create a small vocabulary for osi
+        rr:predicate daq:value ; # this might be changed if we create a small vocabulary for osi
         rr:objectMap [
         	rr:column "TOTAL_INSTANCES"
         ]
